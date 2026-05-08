@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI Video Surveillance Blog — Expert Insights | MJ Innovations FZ LLC</title>
+<meta name="description" content="Expert insights on AI video surveillance, smart security systems, behaviour analytics, and enterprise CCTV AI. Stay ahead with MJ Innovations.">
+<meta name="keywords" content="AI video surveillance, AI CCTV, smart security cameras, video analytics software, AI security system, behaviour detection AI, surveillance AI UAE, enterprise video surveillance">
+<meta property="og:title" content="AI Video Surveillance Blog — MJ Innovations FZ LLC">
+<meta property="og:description" content="Expert insights on AI video surveillance, threat detection, and intelligent security systems from the team at MJ Innovations.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://mjinnovations.ai/blog">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* ── GRID ── */
+.grid-bg-light{background-color:#F4F7FF;background-image:linear-gradient(rgba(13,71,161,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(13,71,161,.055) 1px,transparent 1px);background-size:55px 55px}
+
+/* ── BLOG HERO ── */
+.blog-hero{padding:130px 5% 72px;background:var(--navy);position:relative;overflow:hidden}
+.blog-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(66,165,245,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(66,165,245,.04) 1px,transparent 1px);background-size:55px 55px;z-index:0}
+.blog-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,71,161,.35) 0%,transparent 70%);z-index:0}
+.blog-hero-inner{position:relative;z-index:1;max-width:1240px;margin:0 auto}
+.blog-eyebrow{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue-light);margin-bottom:14px}
+.blog-hero h1{font-family:var(--font-head);font-size:clamp(2.4rem,5vw,4rem);font-weight:200;letter-spacing:-.04em;color:#fff;line-height:1.08;margin-bottom:16px}
+.blog-hero h1 strong{font-weight:800}
+.blog-hero p{font-size:1.05rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:560px;margin-bottom:32px}
+.blog-search{display:flex;gap:0;max-width:480px}
+.blog-search input{flex:1;padding:13px 18px;background:rgba(255,255,255,.06);border:1px solid rgba(66,165,245,.2);border-right:none;border-radius:8px 0 0 8px;font-family:var(--font-body);font-size:14px;color:#fff;outline:none;transition:border-color .2s}
+.blog-search input::placeholder{color:rgba(255,255,255,.25)}
+.blog-search input:focus{border-color:rgba(66,165,245,.45)}
+.blog-search button{padding:13px 22px;background:var(--accent-grad);border:none;border-radius:0 8px 8px 0;font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;cursor:pointer;letter-spacing:.04em;white-space:nowrap;transition:opacity .2s}
+.blog-search button:hover{opacity:.88}
+
+/* ── CATEGORIES ── */
+.cat-strip{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.cat-pill{padding:6px 16px;border:1px solid rgba(66,165,245,.2);border-radius:999px;font-family:var(--font-head);font-size:12px;font-weight:600;letter-spacing:.05em;color:rgba(255,255,255,.5);cursor:pointer;transition:all .2s;background:rgba(66,165,245,.05)}
+.cat-pill:hover,.cat-pill.active{background:var(--blue-mid);color:#fff;border-color:var(--blue-mid)}
+
+/* ── FEATURED BLOG ── */
+.featured-section{padding:72px 5% 0;background:var(--navy);border-bottom:1px solid rgba(66,165,245,.08)}
+.featured-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;max-width:1240px;margin:0 auto;padding-bottom:72px}
+.featured-card{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(66,165,245,.12);background:var(--navy3);cursor:pointer;transition:border-color .25s,transform .25s}
+.featured-card:hover{border-color:rgba(66,165,245,.3);transform:translateY(-3px)}
+.featured-img{position:relative;height:280px;overflow:hidden}
+.featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.featured-card:hover .featured-img img{transform:scale(1.03)}
+.featured-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,25,47,.1) 0%,rgba(10,25,47,.85) 100%)}
+.featured-category{position:absolute;top:16px;left:16px;padding:5px 12px;border-radius:4px;font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--blue-mid);color:#fff}
+.featured-body{padding:24px 26px 28px}
+.blog-meta{display:flex;align-items:center;gap:14px;margin-bottom:12px;flex-wrap:wrap}
+.blog-meta-item{font-family:var(--font-mono);font-size:11px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:5px}
+.blog-meta-item svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2}
+.blog-read-time{padding:3px 9px;background:rgba(66,165,245,.1);border:1px solid rgba(66,165,245,.15);border-radius:3px;font-family:var(--font-mono);font-size:10px;color:var(--blue-pale)}
+.featured-body h2{font-family:var(--font-head);font-size:clamp(1.2rem,2.5vw,1.6rem);font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3;letter-spacing:-.01em}
+.featured-body p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.7;margin-bottom:18px}
+.blog-read-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-head);font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--blue-light);transition:gap .2s}
+.blog-read-btn:hover{gap:13px}
+.blog-read-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .2s}
+.blog-read-btn:hover svg{transform:translateX(3px)}
+
+/* Side featured cards */
+.side-cards{display:flex;flex-direction:column;gap:16px}
+.side-card{border-radius:12px;overflow:hidden;border:1px solid rgba(66,165,245,.1);background:var(--navy3);cursor:pointer;transition:border-color .25s,transform .2s;display:grid;grid-template-columns:100px 1fr}
+.side-card:hover{border-color:rgba(66,165,245,.28);transform:translateX(3px)}
+.side-card-img{position:relative;overflow:hidden;height:100%;min-height:90px}
+.side-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.side-card:hover .side-card-img img{transform:scale(1.05)}
+.side-card-body{padding:14px 16px}
+.side-cat{font-family:var(--font-head);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-light);margin-bottom:5px}
+.side-card-body h3{font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;line-height:1.35;margin-bottom:8px}
+.side-card-body span{font-family:var(--font-mono);font-size:10px;color:rgba(255,255,255,.3)}
+
+/* ── BLOG GRID ── */
+.blog-section{padding:72px 5%;max-width:1240px;margin:0 auto}
+.blog-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:36px;gap:16px;flex-wrap:wrap}
+.blog-section-header h2{font-family:var(--font-head);font-size:1.6rem;font-weight:700;letter-spacing:-.02em;color:var(--text-dark)}
+.view-all{font-family:var(--font-head);font-size:13px;font-weight:600;color:var(--blue-mid);display:flex;align-items:center;gap:6px;transition:gap .2s}
+.view-all:hover{gap:10px}
+
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{border-radius:14px;overflow:hidden;border:1px solid var(--border-light);background:#fff;cursor:pointer;transition:transform .25s,box-shadow .25s;display:flex;flex-direction:column}
+.blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(13,71,161,.1)}
+.bc-img{position:relative;aspect-ratio:16/9;overflow:hidden;background:#F4F7FF}
+.bc-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.blog-card:hover .bc-img img{transform:scale(1.04)}
+.bc-img-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(13,71,161,.08) 100%)}
+.bc-cat{position:absolute;top:12px;left:12px;padding:4px 10px;border-radius:4px;font-family:var(--font-head);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.cat-detection{background:rgba(13,71,161,.85)}
+.cat-behaviour{background:rgba(25,118,210,.85)}
+.cat-retail{background:rgba(21,101,192,.85)}
+.cat-smart-city{background:rgba(66,165,245,.85)}
+.cat-edge{background:rgba(13,71,161,.85)}
+.cat-compliance{background:rgba(56,142,60,.85)}
+.cat-forensics{background:rgba(123,31,162,.8)}
+.cat-healthcare{background:rgba(183,28,28,.8)}
+.cat-industry{background:rgba(230,81,0,.85)}
+
+.bc-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.bc-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.bc-date{font-family:var(--font-mono);font-size:10.5px;color:var(--text-light)}
+.bc-rt{font-family:var(--font-mono);font-size:10px;color:var(--blue-mid);padding:2px 7px;background:var(--blue-tint);border-radius:3px}
+.bc-body h3{font-family:var(--font-head);font-size:15.5px;font-weight:700;color:var(--text-dark);margin-bottom:9px;line-height:1.35;letter-spacing:-.01em}
+.bc-body p{font-size:13.5px;color:var(--text-mid);line-height:1.68;margin-bottom:14px;flex:1}
+.bc-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.bc-tag{padding:3px 9px;border:1px solid var(--border-light);border-radius:3px;font-family:var(--font-head);font-size:10.5px;color:var(--text-light);letter-spacing:.03em}
+.bc-link{font-family:var(--font-head);font-size:13px;font-weight:700;color:var(--blue-mid);display:flex;align-items:center;gap:7px;transition:gap .2s;margin-top:auto}
+.bc-link:hover{gap:11px}
+.bc-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* ── NEWSLETTER ── */
+.newsletter-strip{background:var(--navy3);border:1px solid rgba(66,165,245,.12);border-radius:16px;padding:48px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px;margin:0 0 72px;position:relative;overflow:hidden}
+.newsletter-strip::before{content:'';position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(66,165,245,.07) 0%,transparent 70%);pointer-events:none}
+.nl-left h3{font-family:var(--font-head);font-size:1.4rem;font-weight:700;color:#fff;margin-bottom:7px;letter-spacing:-.02em}
+.nl-left p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.6}
+.nl-form{display:flex;gap:0;flex-shrink:0;min-width:360px}
+.nl-form input{flex:1;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(66,165,245,.18);border-right:none;border-radius:7px 0 0 7px;font-family:var(--font-body);font-size:14px;color:#fff;outline:none;transition:border-color .2s}
+.nl-form input::placeholder{color:rgba(255,255,255,.25)}
+.nl-form input:focus{border-color:rgba(66,165,245,.45)}
+.nl-form button{padding:12px 22px;background:var(--accent-grad);border:none;border-radius:0 7px 7px 0;font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;cursor:pointer;white-space:nowrap;letter-spacing:.04em;transition:opacity .2s}
+.nl-form button:hover{opacity:.88}
+.nl-success{display:none;font-family:var(--font-head);font-size:13.5px;color:var(--green);font-weight:600;flex-shrink:0;padding:12px 20px;background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2);border-radius:7px}
+
+@media(max-width:1100px){.featured-grid{grid-template-columns:1fr}.blog-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.blog-grid{grid-template-columns:1fr}.nl-form{min-width:auto;width:100%}.newsletter-strip{flex-direction:column;align-items:flex-start}.side-card{grid-template-columns:80px 1fr}}
+@media(max-width:480px){.blog-hero h1{font-size:2.2rem}.blog-search{flex-direction:column}.blog-search input{border-right:1px solid rgba(66,165,245,.2);border-radius:8px}.blog-search button{border-radius:8px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "MJ Innovations AI Surveillance Blog",
+  "description": "Expert insights on AI video surveillance, intelligent CCTV systems, behaviour analytics, and enterprise security technology.",
+  "url": "https://mjinnovations.ai/blog",
+  "publisher": {
+    "@type": "Organization",
+    "name": "MJ Innovations FZ LLC",
+    "url": "https://mjinnovations.ai",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://mjinnovations.ai/assets/Logo_Final.png"
+    }
+  }
+}
+</script>
+</head>
+<body>
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo-wrap"><img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC — AI Video Surveillance"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="solutions.html">Solutions</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-group">
+    <button class="btn-nav-outline" onclick="location.href='contact.html'">Contact Sales</button>
+    <button class="btn-nav-fill" onclick="location.href='get-demo.html'">Get Demo →</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html">Home</a><a href="solutions.html">Solutions</a><a href="technology.html">Technology</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="drawer-cta"><button class="btn-primary" style="width:100%;justify-content:center" onclick="location.href='get-demo.html'">Get a Demo →</button></div>
+</div>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="blog-hero-inner fade-up">
+    <div class="blog-eyebrow">Knowledge Hub</div>
+    <h1>AI Video Surveillance<br><strong>Insights &amp; Expertise</strong></h1>
+    <p>Deep-dive articles on AI-powered security, intelligent CCTV systems, behaviour analytics, and the future of enterprise surveillance — from the team building it.</p>
+    <div class="blog-search">
+      <input type="text" placeholder="Search articles — e.g. perimeter detection, smart cities..." id="blog-search-input">
+      <button onclick="doSearch()">Search →</button>
+    </div>
+    <div class="cat-strip">
+      <span class="cat-pill active" onclick="filterCat(this,'all')">All Topics</span>
+      <span class="cat-pill" onclick="filterCat(this,'detection')">AI Detection</span>
+      <span class="cat-pill" onclick="filterCat(this,'behaviour')">Behaviour AI</span>
+      <span class="cat-pill" onclick="filterCat(this,'smart-city')">Smart Cities</span>
+      <span class="cat-pill" onclick="filterCat(this,'retail')">Retail &amp; Banking</span>
+      <span class="cat-pill" onclick="filterCat(this,'edge')">Edge AI</span>
+      <span class="cat-pill" onclick="filterCat(this,'compliance')">Privacy &amp; Compliance</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<div class="featured-section">
+  <div class="featured-grid">
+    <!-- Main featured -->
+    <a href="blog/ai-video-surveillance-guide-2026.html" class="featured-card fade-up">
+      <div class="featured-img">
+        <img src="assets/images/Autonomous_detection.png" alt="Complete Guide to AI Video Surveillance 2026" loading="eager">
+        <div class="featured-img-overlay"></div>
+        <span class="featured-category">AI Detection</span>
+      </div>
+      <div class="featured-body">
+        <div class="blog-meta">
+          <span class="blog-meta-item"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>May 1, 2026</span>
+          <span class="blog-read-time">12 min read</span>
+          <span class="blog-meta-item">Featured</span>
+        </div>
+        <h2>The Complete Guide to AI Video Surveillance in 2026: How Intelligent Cameras Are Redefining Enterprise Security</h2>
+        <p>AI video surveillance is no longer a future concept — it's the fastest-growing segment in enterprise security. Here's everything you need to know about how it works, what it can detect, and why it outperforms traditional CCTV systems by a factor of ten.</p>
+        <span class="blog-read-btn">Read Full Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+    <!-- Side cards -->
+    <div class="side-cards">
+      <a href="blog/behaviour-analytics-loitering-detection.html" class="side-card fade-up" style="transition-delay:.08s">
+        <div class="side-card-img"><img src="assets/images/Autonomous_behavior_analysis.png" alt="Behaviour Analytics" loading="lazy"></div>
+        <div class="side-card-body"><div class="side-cat">Behaviour AI</div><h3>How AI Detects Loitering, Aggression &amp; Crowd Anomalies Before They Escalate</h3><span>Apr 28, 2026 · 9 min</span></div>
+      </a>
+      <a href="blog/ai-surveillance-smart-cities-uae.html" class="side-card fade-up" style="transition-delay:.14s">
+        <div class="side-card-img"><img src="assets/images/Urban_Intelligence_Smart_Cities.png" alt="Smart Cities AI Surveillance" loading="lazy"></div>
+        <div class="side-card-body"><div class="side-cat">Smart Cities</div><h3>Smart City AI Surveillance: How Dubai and Abu Dhabi Are Leading the World</h3><span>Apr 25, 2026 · 11 min</span></div>
+      </a>
+      <a href="blog/edge-ai-cameras-vs-cloud-surveillance.html" class="side-card fade-up" style="transition-delay:.20s">
+        <div class="side-card-img"><img src="assets/images/perimeter_watch.png" alt="Edge AI vs Cloud Surveillance" loading="lazy"></div>
+        <div class="side-card-body"><div class="side-cat">Edge AI</div><h3>Edge AI vs Cloud Surveillance: Which Architecture Is Right for Your Site?</h3><span>Apr 22, 2026 · 8 min</span></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ALL ARTICLES -->
+<div class="blog-section">
+  <div class="blog-section-header">
+    <h2>All Articles</h2>
+    <span id="article-count" style="font-family:var(--font-mono);font-size:12px;color:var(--text-light)">10 articles</span>
+  </div>
+  <div class="blog-grid" id="blog-grid">
+
+    <!-- Card 1 -->
+    <a href="blog/ai-video-surveillance-guide-2026.html" class="blog-card fade-up" data-cat="detection">
+      <div class="bc-img">
+        <img src="assets/images/Autonomous_detection.png" alt="AI Video Surveillance Complete Guide" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-detection">AI Detection</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">May 1, 2026</span><span class="bc-rt">12 min</span></div>
+        <h3>The Complete Guide to AI Video Surveillance in 2026</h3>
+        <p>Everything you need to know about AI-powered CCTV — from object detection models to real-time alerting — and why it outperforms traditional surveillance by 10×.</p>
+        <div class="bc-tags"><span class="bc-tag">AI surveillance</span><span class="bc-tag">CCTV AI</span><span class="bc-tag">video analytics</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 2 -->
+    <a href="blog/behaviour-analytics-loitering-detection.html" class="blog-card fade-up" data-cat="behaviour" style="transition-delay:.06s">
+      <div class="bc-img">
+        <img src="assets/images/Autonomous_behavior_analysis.png" alt="Behaviour Analytics Loitering Detection AI" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-behaviour">Behaviour AI</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 28, 2026</span><span class="bc-rt">9 min</span></div>
+        <h3>How AI Detects Loitering, Aggression &amp; Crowd Anomalies Before They Escalate</h3>
+        <p>Behaviour analytics AI goes beyond bounding boxes — it understands intent. Here's how graph neural networks flag threats humans miss.</p>
+        <div class="bc-tags"><span class="bc-tag">behaviour analytics</span><span class="bc-tag">loitering detection</span><span class="bc-tag">crowd AI</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 3 -->
+    <a href="blog/ai-surveillance-smart-cities-uae.html" class="blog-card fade-up" data-cat="smart-city" style="transition-delay:.12s">
+      <div class="bc-img">
+        <img src="assets/images/Urban_Intelligence_Smart_Cities.png" alt="AI Surveillance Smart Cities UAE Dubai" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-smart-city">Smart Cities</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 25, 2026</span><span class="bc-rt">11 min</span></div>
+        <h3>Smart City AI Surveillance: How Dubai &amp; Abu Dhabi Are Leading the World</h3>
+        <p>The UAE is setting the global benchmark for AI-powered urban surveillance. Here's the technology behind it — and what other cities are learning.</p>
+        <div class="bc-tags"><span class="bc-tag">smart city surveillance</span><span class="bc-tag">Dubai AI</span><span class="bc-tag">urban security</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 4 -->
+    <a href="blog/edge-ai-cameras-vs-cloud-surveillance.html" class="blog-card fade-up" data-cat="edge">
+      <div class="bc-img">
+        <img src="assets/images/perimeter_watch.png" alt="Edge AI vs Cloud Video Surveillance" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-edge">Edge AI</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 22, 2026</span><span class="bc-rt">8 min</span></div>
+        <h3>Edge AI vs Cloud Surveillance: Which Architecture Is Right for Your Site?</h3>
+        <p>Should your AI run on-device or in the cloud? We break down the trade-offs in latency, privacy, cost, and resilience for enterprise deployments.</p>
+        <div class="bc-tags"><span class="bc-tag">edge AI cameras</span><span class="bc-tag">cloud surveillance</span><span class="bc-tag">on-premise AI</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 5 -->
+    <a href="blog/retail-ai-surveillance-theft-prevention.html" class="blog-card fade-up" data-cat="retail" style="transition-delay:.06s">
+      <div class="bc-img">
+        <img src="assets/images/Retail_Banking_Financial.png" alt="Retail AI Surveillance Theft Prevention" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-retail">Retail &amp; Banking</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 19, 2026</span><span class="bc-rt">10 min</span></div>
+        <h3>How Retailers Are Using AI Surveillance to Cut Theft by 60% Without Hiring More Guards</h3>
+        <p>AI-powered CCTV in retail environments is proving more effective — and far cheaper — than traditional loss prevention. Real results, real numbers.</p>
+        <div class="bc-tags"><span class="bc-tag">retail surveillance AI</span><span class="bc-tag">theft prevention</span><span class="bc-tag">loss prevention</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 6 -->
+    <a href="blog/gdpr-ai-surveillance-privacy-compliance.html" class="blog-card fade-up" data-cat="compliance" style="transition-delay:.12s">
+      <div class="bc-img">
+        <img src="assets/images/Government_Critical_Infrastructure.png" alt="GDPR AI Surveillance Privacy Compliance" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-compliance">Privacy &amp; Compliance</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 16, 2026</span><span class="bc-rt">13 min</span></div>
+        <h3>GDPR, CCPA &amp; AI Surveillance: How to Deploy Intelligent CCTV Without Breaking Privacy Law</h3>
+        <p>AI surveillance and data privacy law don't have to conflict. Here's a practical guide for legal, compliant deployments across different jurisdictions.</p>
+        <div class="bc-tags"><span class="bc-tag">GDPR surveillance</span><span class="bc-tag">AI privacy compliance</span><span class="bc-tag">CCTV law</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 7 -->
+    <a href="blog/ai-perimeter-security-intrusion-detection.html" class="blog-card fade-up" data-cat="detection">
+      <div class="bc-img">
+        <img src="assets/images/perimeter_watch.png" alt="AI Perimeter Security Intrusion Detection" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-detection">AI Detection</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 13, 2026</span><span class="bc-rt">9 min</span></div>
+        <h3>AI-Powered Perimeter Security: Why Intelligent Intrusion Detection Is Replacing Fences &amp; Guards</h3>
+        <p>Traditional perimeter security reacts to incidents. AI perimeter surveillance detects threats before they breach — here's the technology making it possible.</p>
+        <div class="bc-tags"><span class="bc-tag">perimeter security AI</span><span class="bc-tag">intrusion detection</span><span class="bc-tag">fence detection</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 8 -->
+    <a href="blog/ai-surveillance-healthcare-patient-safety.html" class="blog-card fade-up" data-cat="behaviour" style="transition-delay:.06s">
+      <div class="bc-img">
+        <img src="assets/images/Healthcare_Medical_Facilities.png" alt="AI Surveillance Healthcare Patient Safety" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-healthcare">Healthcare</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 10, 2026</span><span class="bc-rt">10 min</span></div>
+        <h3>AI Video Surveillance in Healthcare: Protecting Patients Without Compromising Privacy</h3>
+        <p>Hospitals and medical facilities present unique surveillance challenges — fall detection, restricted zones, and strict patient privacy. How AI solves all three.</p>
+        <div class="bc-tags"><span class="bc-tag">healthcare AI surveillance</span><span class="bc-tag">patient safety AI</span><span class="bc-tag">HIPAA cameras</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 9 -->
+    <a href="blog/manufacturing-ai-ppe-safety-compliance.html" class="blog-card fade-up" data-cat="detection" style="transition-delay:.12s">
+      <div class="bc-img">
+        <img src="assets/images/Manufacturing_Industrial.png" alt="Manufacturing AI PPE Safety Surveillance" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-industry">Manufacturing</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 7, 2026</span><span class="bc-rt">8 min</span></div>
+        <h3>How AI Video Surveillance Is Enforcing PPE Compliance &amp; Reducing Workplace Incidents by 70%</h3>
+        <p>In industrial environments, a missed safety violation can cost lives. AI surveillance catches PPE non-compliance the instant it happens — 24 hours a day.</p>
+        <div class="bc-tags"><span class="bc-tag">PPE compliance AI</span><span class="bc-tag">industrial surveillance</span><span class="bc-tag">workplace safety AI</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+    <!-- Card 10 -->
+    <a href="blog/forensic-video-search-ai-investigations.html" class="blog-card fade-up" data-cat="detection">
+      <div class="bc-img">
+        <img src="assets/images/incident_response.png" alt="AI Forensic Video Search Investigations" loading="lazy">
+        <div class="bc-img-overlay"></div>
+        <span class="bc-cat cat-forensics">Forensics</span>
+      </div>
+      <div class="bc-body">
+        <div class="bc-meta"><span class="bc-date">Apr 4, 2026</span><span class="bc-rt">11 min</span></div>
+        <h3>AI Forensic Video Search: How to Find Any Person or Event Across Weeks of Footage in Under a Second</h3>
+        <p>Post-incident investigations used to mean hours of video scrubbing. Semantic AI search finds the exact clip you need — across every camera — in milliseconds.</p>
+        <div class="bc-tags"><span class="bc-tag">forensic video search</span><span class="bc-tag">AI investigation</span><span class="bc-tag">video intelligence</span></div>
+        <span class="bc-link">Read Article <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+
+  </div><!-- /blog-grid -->
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter-strip fade-up" style="margin-top:64px">
+    <div class="nl-left">
+      <h3>Stay ahead in AI surveillance</h3>
+      <p>Get new articles, case studies, and industry insights delivered every two weeks. No spam, ever.</p>
+    </div>
+    <div>
+      <form class="nl-form" onsubmit="subscribeNL(event)">
+        <input type="email" placeholder="your@email.com" required>
+        <button type="submit">Subscribe →</button>
+      </form>
+      <div class="nl-success" id="nl-success">✓ You're subscribed!</div>
+    </div>
+  </div>
+</div><!-- /blog-section -->
+
+<!-- CTA -->
+<div class="cta-strip">
+  <div class="cta-glow"></div>
+  <div class="cta-border-tl"></div>
+  <div class="cta-border-br"></div>
+  <div class="cta-strip-inner">
+    <div class="cta-eyebrow"><span class="cta-eyebrow-dot"></span>See the Technology</div>
+    <h2>Ready to see AI surveillance <strong>live?</strong></h2>
+    <p>Book a free 30-minute demo with one of our AI engineers — no sales pitch, just real detection on real cameras.</p>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Free Demo →</button>
+      <button class="btn-secondary-light" onclick="location.href='technology.html'">Explore the Technology</button>
+    </div>
+    <div class="cta-trust">
+      <div class="cta-trust-item"><span class="cta-trust-icon">✓</span>No obligation</div>
+      <div class="cta-trust-item"><span class="cta-trust-icon">✓</span>30 minutes</div>
+      <div class="cta-trust-item"><span class="cta-trust-icon">✓</span>Real AI, not a demo video</div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="assets/Logo_Footer.png" alt="MJ Innovations FZ LLC">
+      <p>AI-powered video surveillance for the world's most security-conscious organizations. Where Innovation Meets Intelligence.</p>
+      <div class="footer-socials">
+        <a class="fsoc" href="#" aria-label="Twitter/X">𝕏</a>
+        <a class="fsoc" href="#" aria-label="LinkedIn">in</a>
+        <a class="fsoc" href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Products</h5><ul><li><a href="technology.html">Vision AI</a></li><li><a href="technology.html">Behaviour Analytics</a></li><li><a href="technology.html">Alert System</a></li><li><a href="technology.html">Device X</a></li></ul></div>
+    <div class="footer-col"><h5>Solutions</h5><ul><li><a href="solutions.html">Smart Cities</a></li><li><a href="solutions.html">Retail &amp; Banking</a></li><li><a href="solutions.html">Infrastructure</a></li><li><a href="solutions.html">Healthcare</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="get-demo.html">Get a Demo</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>MJ Innovations FZ LLC © 2026 · Where Innovation Meets Intelligence</p>
+    <div class="footer-devbadge">❤ Designed &amp; Developed by <a href="https://developedge.wuaze.com/" target="_blank" rel="noopener">DevelopEdge</a></div>
+    <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms-conditions.html">Terms</a></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function filterCat(el,cat){
+  document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  const cards=document.querySelectorAll('#blog-grid .blog-card');
+  let visible=0;
+  cards.forEach(c=>{
+    const show=(cat==='all'||c.dataset.cat===cat);
+    c.style.display=show?'flex':'none';
+    if(show)visible++;
+  });
+  document.getElementById('article-count').textContent=visible+' article'+(visible!==1?'s':'');
+}
+function doSearch(){
+  const q=document.getElementById('blog-search-input').value.toLowerCase().trim();
+  if(!q)return;
+  const cards=document.querySelectorAll('#blog-grid .blog-card');
+  let visible=0;
+  cards.forEach(c=>{
+    const text=c.textContent.toLowerCase();
+    const show=text.includes(q);
+    c.style.display=show?'flex':'none';
+    if(show)visible++;
+  });
+  document.getElementById('article-count').textContent=visible+' result'+(visible!==1?'s':'');
+  document.querySelectorAll('.cat-pill').forEach(p=>p.classList.remove('active'));
+}
+document.getElementById('blog-search-input').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
+function subscribeNL(e){
+  e.preventDefault();
+  e.target.style.display='none';
+  document.getElementById('nl-success').style.display='block';
+}
+</script>
+</body>
+</html>
