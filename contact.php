@@ -54,13 +54,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'smtp.gmail.com';               // Gmail SMTP server
         $mail->SMTPAuth   = true;                           // Enable SMTP authentication
         $mail->Username   = 'apshow96@gmail.com';           // Your Gmail address
-        $mail->Password   = 'ynqi xvpb brjb thvk';           // Your App Password
+        $mail->Password   = '';           // Your App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;    // Enable implicit TLS encryption
         $mail->Port       = 465;                            // TCP port to connect to
 
         // 6. Recipients
-        $mail->setFrom('apshow96@gmail.com', 'MJ Innovations Website'); 
-        $mail->addAddress('porwalaaditya6@gmail.com', 'MJ Innovations Sales'); 
+        $mail->setFrom('', 'MJ Innovations Website'); 
+        $mail->addAddress('', 'MJ Innovations Sales'); 
         $mail->addReplyTo($email, "$firstName $lastName");                 // Allows you to hit "Reply" and email the user directly
 
         // 7. Email Formatting (Clean Professional Template)
