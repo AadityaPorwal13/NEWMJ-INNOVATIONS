@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Solutions — MJ Innovations FZ LLC</title>
+<meta name="description" content="AI surveillance solutions for smart cities, airports, retail, banking, healthcare and more. MJ Innovations FZ LLC.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.grid-light{background-color:#ECEFF1;background-image:linear-gradient(rgba(27,79,168,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.05) 1px,transparent 1px);background-size:55px 55px}
+.grid-white{background-color:#fff;background-image:linear-gradient(rgba(27,79,168,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,0.05) 1px,transparent 1px);background-size:55px 55px}
+.grid-dark{background-color:var(--navy);background-image:linear-gradient(rgba(66,165,245,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(66,165,245,.04) 1px,transparent 1px);background-size:55px 55px}
+
+/* ── STICKY TABS ── */
+.sol-tabs-wrap{position:sticky;top:70px;z-index:100;background:rgba(27,79,168,.97);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(66,165,245,.12)}
+.sol-tabs{display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none;max-width:1360px;margin:0 auto;padding:0 5%}
+.sol-tabs::-webkit-scrollbar{display:none}
+.sol-tab{flex-shrink:0;padding:15px 18px;font-family:var(--font-head);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.4);border-bottom:2px solid transparent;border-top:none;border-left:none;border-right:none;cursor:pointer;transition:color .2s,border-color .2s;white-space:nowrap;background:none;-webkit-tap-highlight-color:transparent}
+.sol-tab:hover{color:rgba(255,255,255,.75)}
+.sol-tab.active{color:var(--blue-light);border-bottom-color:var(--blue-light)}
+
+/* ── MOBILE TABS ── */
+@media(max-width:768px){
+  /* On mobile nav is 60px tall */
+  .sol-tabs-wrap{top:60px}
+  .sol-tabs{padding:0 3%;gap:0}
+  .sol-tab{font-size:10.5px;padding:13px 14px;letter-spacing:.04em}
+}
+@media(max-width:480px){
+  .sol-tabs-wrap{top:60px}
+  .sol-tabs{padding:0 2%}
+  /* Compress labels on very small screens */
+  .sol-tab{font-size:10px;padding:12px 11px;letter-spacing:.03em}
+  /* Show scroll shadow hint on left/right edges */
+  .sol-tabs-wrap{-webkit-mask-image:linear-gradient(to right,transparent 0%,black 4%,black 96%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,black 4%,black 96%,transparent 100%)}
+}
+
+/* ── SOLUTION SECTION ── */
+.sol-section{border-bottom:1px solid rgba(66,165,245,.1)}
+.sol-section:last-of-type{border-bottom:none}
+
+.sol-header{padding:72px 5% 0;max-width:1360px;margin:0 auto;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.sol-sol-chip{display:inline-flex;align-items:center;gap:7px;padding:5px 13px;border-radius:999px;background:rgba(66,165,245,.1);border:1px solid rgba(66,165,245,.25);font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px}
+.sol-chip-dot{width:6px;height:6px;border-radius:50%;background:var(--blue-light);animation:pulse 1.6s infinite}
+.sol-header h2{font-family:var(--font-head);font-size:clamp(2rem,4.5vw,3.6rem);font-weight:200;letter-spacing:-.04em;color:#fff;line-height:1.08;margin:0}
+.sol-header h2 strong{font-weight:800;display:block}
+.sol-header-right{max-width:400px;font-size:14px;color:rgba(255,255,255,.45);line-height:1.72}
+
+/* ── ILLUSTRATION ── */
+.sol-illus-wrap{margin:40px auto 0;max-width:1000px;width:90%;border-radius:16px;overflow:hidden;border:1px solid rgba(66,165,245,.15);box-shadow:inset 0 0 20px rgba(66,165,245,.05),0 24px 72px rgba(0,0,0,.35);background:rgba(255,255,255,.02);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .3s,transform .3s;padding:12px}
+.sol-illus-wrap:hover{box-shadow:inset 0 0 20px rgba(66,165,245,.1),0 32px 80px rgba(27,79,168,.25);transform:translateY(-4px)}
+.sol-illus-wrap img{width:100%;height:auto;display:block;border-radius:8px}
+
+/* ── DETAIL ROW ── */
+.sol-detail{padding:40px 5% 72px;max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;align-items:start}
+
+.sol-feats-box,.sol-stats-box{background:rgba(27,79,168,.05);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(66,165,245,.15);border-radius:12px;padding:24px;box-shadow:inset 0 0 20px rgba(66,165,245,.05);transition:transform .2s,box-shadow .2s}
+.sol-feats-box:hover,.sol-stats-box:hover{transform:translateY(-2px);box-shadow:inset 0 0 20px rgba(66,165,245,.1),0 10px 30px rgba(0,0,0,.2)}
+.sol-box-title{font-family:var(--font-head);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-light);margin-bottom:16px}
+
+.sol-feats{list-style:none;display:flex;flex-direction:column;gap:10px}
+.sol-feats li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.6);font-family:var(--font-head);font-weight:500;line-height:1.45}
+.sf-check{width:18px;height:18px;border-radius:50%;background:rgba(66,165,245,.15);border:1px solid rgba(66,165,245,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.sf-check svg{width:9px;height:9px;stroke:var(--blue-light);fill:none;stroke-width:2.5}
+
+.sol-stat-row{display:flex;flex-direction:column;padding:12px 0;border-bottom:1px solid rgba(66,165,245,.08)}
+.sol-stat-row:last-child{border-bottom:none;padding-bottom:0}
+.sol-stat-num{font-family:var(--font-head);font-size:1.6rem;font-weight:800;letter-spacing:-.03em;line-height:1;background:var(--accent-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sol-stat-lbl{font-size:11.5px;color:rgba(255,255,255,.35);font-family:var(--font-head);margin-top:3px}
+
+.sol-cta-box{background:linear-gradient(135deg,rgba(120,144,156,0.45),rgba(66,165,245,.1));backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid rgba(66,165,245,.3);border-radius:12px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+.sol-cta-box h4{font-family:var(--font-head);font-size:17px;font-weight:700;color:#fff;line-height:1.3}
+.sol-cta-box p{font-size:13px;color:rgba(255,255,255,.6);line-height:1.65}
+.sol-comp-strip{display:flex;flex-wrap:wrap;gap:6px}
+.sol-comp-badge{font-family:var(--font-head);font-size:10px;font-weight:700;color:var(--blue-pale);background:rgba(66,165,245,.1);border:1px solid rgba(66,165,245,.2);padding:3px 9px;border-radius:4px}
+.sol-cta-btns{display:flex;flex-direction:column;gap:10px;width:100%}
+.sol-cta-btns .btn-primary,.sol-cta-btns .btn-secondary-light{width:100%;justify-content:center;font-size:12px;padding:12px 20px}
+
+/* ── CAPABILITIES ── */
+.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.cap-card{background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:28px 24px;transition:transform .2s,box-shadow .2s;background-image:linear-gradient(rgba(27,79,168,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,0.05) 1px,transparent 1px);background-size:55px 55px}
+.cap-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(176,190,197,0.45)}
+.cap-icon{width:44px;height:44px;border-radius:10px;background:var(--metal-light);border:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.cap-icon svg{width:20px;height:20px;stroke:var(--blue-mid);fill:none;stroke-width:1.5}
+.cap-card h4{font-family:var(--font-head);font-size:15px;font-weight:700;margin-bottom:8px}
+.cap-card p{font-size:13.5px;color:var(--text-mid);line-height:1.65}
+
+/* ── PROCESS ── */
+.process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border-light);border-radius:14px;overflow:hidden;margin-top:52px}
+.p-step{padding:30px 26px;position:relative;background:#fff;background-image:linear-gradient(rgba(27,79,168,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,0.05) 1px,transparent 1px);background-size:55px 55px}
+.p-step:not(:last-child){border-right:1px solid var(--border-light)}
+.p-step-big{font-family:var(--font-head);font-size:3.5rem;font-weight:900;color:rgba(27,79,168,.08);position:absolute;top:20px;right:18px;line-height:1}
+.p-step-label{font-family:var(--font-mono);font-size:11px;color:var(--blue-mid);margin-bottom:8px;letter-spacing:.06em}
+.p-step h4{font-family:var(--font-head);font-size:15px;font-weight:700;margin-bottom:7px}
+.p-step p{font-size:13px;color:var(--text-mid);line-height:1.6}
+.p-step-icon{width:36px;height:36px;border-radius:8px;background:var(--metal-light);border:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.p-step-icon svg{width:18px;height:18px;stroke:var(--blue-mid);fill:none;stroke-width:1.5}
+
+/* ── TESTIMONIALS (CHANGED TO PILOT METRICS) ── */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.testi-card{background:#fff;border:1px solid var(--border-light);border-radius:12px;padding:28px 24px;position:relative;background-image:linear-gradient(rgba(27,79,168,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,0.05) 1px,transparent 1px);background-size:55px 55px}
+.testi-card::before{content:'';position:absolute;top:16px;right:20px;font-size:3rem;line-height:1;color:rgba(176,190,197,0.45);font-family:Georgia,serif;font-weight:900}
+.testi-stars{display:flex;gap:3px;margin-bottom:14px; color: var(--blue-mid); font-family: var(--font-mono); font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;}
+.testi-star{width:14px;height:14px;background:var(--blue-mid);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.testi-text{font-size:14px;color:var(--text-mid);line-height:1.7;margin-bottom:18px;}
+.testi-author{display:flex;align-items:center;gap:10px}
+.testi-avatar{width:36px;height:36px;border-radius:8px;background:var(--metal-light);display:flex;align-items:center;justify-content:center;color:var(--blue-mid);flex-shrink:0}
+.testi-name{font-family:var(--font-head);font-size:13px;font-weight:700;color:var(--text-dark)}
+.testi-role{font-size:11.5px;color:var(--text-light);font-family:var(--font-head)}
+
+/* ── COMPLIANCE ── */
+.comp-two{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.comp-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cbadge{padding:8px 18px;background:var(--metal-light);border:1px solid var(--border-light);border-radius:6px;font-family:var(--font-head);font-size:12px;font-weight:700;color:var(--blue-mid);letter-spacing:.06em}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){.sol-detail{grid-template-columns:1fr 1fr}.sol-cta-box{grid-column:1/-1}}
+@media(max-width:900px){.cap-grid{grid-template-columns:1fr 1fr}.comp-two{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.process-row{grid-template-columns:1fr 1fr}.p-step:not(:last-child){border-right:none;border-bottom:1px solid var(--border-light)}}
+@media(max-width:700px){.sol-detail{grid-template-columns:1fr}.sol-header{padding-top:48px;padding-left:4%;padding-right:4%}.sol-illus-wrap{margin:24px auto 0;width:92%;border-radius:10px;padding:8px}.sol-detail{padding:28px 4% 56px}}
+@media(max-width:600px){.cap-grid{grid-template-columns:1fr}.process-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo-wrap"><img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="solutions.html" class="active">Solutions</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-group">
+    <button class="btn-nav-outline" onclick="location.href='contact.html'">Contact Sales</button>
+    <button class="btn-nav-fill" onclick="location.href='get-demo.html'">Get Demo →</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html">Home</a><a href="solutions.html">Solutions</a>
+  <a href="technology.html">Technology</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <div class="drawer-cta"><button class="btn-primary" style="width:100%;justify-content:center" onclick="location.href='get-demo.html'">Get a Demo →</button></div>
+</div>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="hero-glow-orb"></div>
+  <div class="hero-glow-orb-2"></div>
+  <div class="page-hero-inner fade-up">
+    <div class="eyebrow eyebrow-light">AI Surveillance Solutions</div>
+    <h1 class="reveal-text"><span>Purpose-built for every <strong>industry.</strong></span></h1>
+    <p>MJ Innovations deploys intelligent video surveillance across the world's most complex and security-critical environments — from smart cities to airports, banking vaults to hospital wards.</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:28px">
+      <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Free Demo →</button>
+      <button class="btn-secondary-light" onclick="location.href='contact.html'">Contact a Specialist</button>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY TABS -->
+<div class="sol-tabs-wrap">
+  <div class="sol-tabs">
+    <button class="sol-tab active" onclick="scrollToSol('sol-cities')">Smart Cities</button>
+    <button class="sol-tab" onclick="scrollToSol('sol-airports')">Airports &amp; Transit</button>
+    <button class="sol-tab" onclick="scrollToSol('sol-retail')">Retail &amp; Banking</button>
+    <button class="sol-tab" onclick="scrollToSol('sol-healthcare')">Healthcare</button>
+    <button class="sol-tab" onclick="scrollToSol('sol-manufacturing')">Manufacturing</button>
+    <button class="sol-tab" onclick="scrollToSol('sol-government')">Government</button>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 01 — SMART CITIES ══════════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-cities">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 01</div>
+      <h2>Urban Intelligence<br><strong>&amp; Smart Cities.</strong></h2>
+    </div>
+    <div class="sol-header-right">City-wide AI surveillance networks that monitor public spaces, detect incidents, and assist emergency services in real time — reducing crime rates and improving response times dramatically.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Urban_Intelligence_Smart_Cities.png" alt="Urban Intelligence & Smart Cities" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>City-wide camera network management</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Crowd surge &amp; riot early detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Traffic &amp; pedestrian flow analytics</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Emergency services integration</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Vehicle tracking &amp; plate recognition</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Incident detection &amp; real-time alerts</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">99.7%</div><div class="sol-stat-lbl">Detection Accuracy</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">&lt;300ms</div><div class="sol-stat-lbl">Alert Latency</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">24/7</div><div class="sol-stat-lbl">Autonomous Monitoring</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Deploy AI surveillance across your city</h4>
+      <p>From a single district to a full metro-wide network. Scalable, sovereign-grade architecture.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">GDPR</span><span class="sol-comp-badge">ISO 27001</span><span class="sol-comp-badge">On-Premise</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 02 — AIRPORTS ══════════════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-airports">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 02</div>
+      <h2>Airports, Rail<br><strong>&amp; Transit Hubs.</strong></h2>
+    </div>
+    <div class="sol-header-right">AI surveillance engineered for high-throughput, high-stakes transportation environments. Monitor terminals, platforms, and perimeters with zero manual oversight required.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Airports_Rail_Transit_Hubs.png" alt="Airports, Rail & Transit Hubs" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Unattended baggage detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Perimeter &amp; airside security</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Queue management analytics</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>VIP &amp; threat profile tracking</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Passport &amp; boarding gate monitoring</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Smarter Travel. Safer Journeys.</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">&lt;0.3s</div><div class="sol-stat-lbl">Alert Latency</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">99.7%</div><div class="sol-stat-lbl">Detection Accuracy</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">360°</div><div class="sol-stat-lbl">Coverage</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Protect every terminal, platform &amp; gate</h4>
+      <p>Integrated AI surveillance for the world's most complex transit environments.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">NDAA</span><span class="sol-comp-badge">TSA Ready</span><span class="sol-comp-badge">ISO 27001</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 03 — RETAIL & BANKING ═════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-retail">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 03</div>
+      <h2>Retail, Banking<br><strong>&amp; Financial.</strong></h2>
+    </div>
+    <div class="sol-header-right">Protect assets and customers while gaining powerful business intelligence. Detect theft, fraud patterns, and safety hazards while analysing customer flow and dwell time.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Retail_Banking_Financial.png" alt="Retail, Banking & Financial" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Shoplifting &amp; theft detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>ATM skimming &amp; fraud alerts</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Customer heatmap analytics</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>After-hours intrusion detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Staff safety monitoring</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Smarter Security. Stronger Business.</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">360°</div><div class="sol-stat-lbl">Blind-spot Elimination</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">API</div><div class="sol-stat-lbl">Seamless Integration</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Protect assets. Grow your business.</h4>
+      <p>From single-store retail to multinational banking networks — scalable from day one.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">PCI DSS</span><span class="sol-comp-badge">GDPR</span><span class="sol-comp-badge">SOC 2</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 04 — HEALTHCARE ═══════════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-healthcare">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 04</div>
+      <h2>Healthcare<br><strong>&amp; Medical Facilities.</strong></h2>
+    </div>
+    <div class="sol-header-right">Patient safety and asset protection in sensitive environments. Monitor wards, detect falls, enforce restricted zones, and protect staff — all with strict privacy compliance built in.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Healthcare_Medical_Facilities.png" alt="Healthcare & Medical Facilities" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Patient fall &amp; distress detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Restricted zone access control</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Asset tracking &amp; theft prevention</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>HIPAA-compliant architecture</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Staff duress &amp; safety monitoring</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Safer Care. Smarter Operations.</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">100%</div><div class="sol-stat-lbl">Privacy by Design</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">HIPAA</div><div class="sol-stat-lbl">Certified Architecture</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">0</div><div class="sol-stat-lbl">Privacy Breaches Recorded</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Built with Privacy. Designed for Care.</h4>
+      <p>AI insights that improve patient outcomes and operational efficiency — with zero compromise on compliance.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">HIPAA</span><span class="sol-comp-badge">GDPR</span><span class="sol-comp-badge">ISO 27001</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 05 — MANUFACTURING ═══════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-manufacturing">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 05</div>
+      <h2>Manufacturing<br><strong>&amp; Industrial.</strong></h2>
+    </div>
+    <div class="sol-header-right">Ensure worker safety, enforce PPE compliance, and protect critical machinery. AI surveillance that integrates with your industrial control systems for holistic site protection.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Manufacturing_Industrial.png" alt="Manufacturing & Industrial" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>PPE &amp; safety compliance monitoring</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Hazardous zone enforcement</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Equipment tampering alerts</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Shift &amp; workforce analytics</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Fire &amp; smoke early detection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Safer Work. Stronger Operations.</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">14+</div><div class="sol-stat-lbl">PPE Types Monitored</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">ISO</div><div class="sol-stat-lbl">45001 Ready</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">RT</div><div class="sol-stat-lbl">Real-Time PPE Compliance</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Safety-first AI for your factory floor</h4>
+      <p>Integrates with SCADA, PLC, ERP, and HR systems for holistic operational intelligence.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">OSHA</span><span class="sol-comp-badge">ISO 45001</span><span class="sol-comp-badge">SIL 2</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SOLUTION 06 — GOVERNMENT ══════════════════════════════ -->
+<div class="sol-section grid-dark" id="sol-government">
+  <div class="sol-header fade-up">
+    <div>
+      <div class="sol-sol-chip"><span class="sol-chip-dot"></span>Solution 06</div>
+      <h2>Government<br><strong>&amp; Critical Infrastructure.</strong></h2>
+    </div>
+    <div class="sol-header-right">Protect national assets with sovereign-grade AI surveillance. Designed for border control, critical infrastructure, government buildings, and classified environments.</div>
+  </div>
+  <div class="sol-illus-wrap scale-in">
+    <img src="assets/images/Government_Critical_Infrastructure.png" alt="Government & Critical Infrastructure" loading="lazy">
+  </div>
+  <div class="sol-detail">
+    <div class="sol-feats-box">
+      <div class="sol-box-title">Key Capabilities</div>
+      <ul class="sol-feats">
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Border &amp; perimeter protection</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Secure on-premise deployment</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Classification-level data handling</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Multi-agency response integration</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Counter-drone capabilities</li>
+        <li><span class="sf-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Sovereign Security. National Resilience.</li>
+      </ul>
+    </div>
+    <div class="sol-stats-box">
+      <div class="sol-box-title">Proven Results</div>
+      <div class="sol-stat-row"><div class="sol-stat-num">Air</div><div class="sol-stat-lbl">Gap Capable Deployment</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">NDAA</div><div class="sol-stat-lbl">Fully Compliant</div></div>
+      <div class="sol-stat-row"><div class="sol-stat-num">99.99%</div><div class="sol-stat-lbl">Uptime SLA</div></div>
+    </div>
+    <div class="sol-cta-box">
+      <h4>Sovereign-grade surveillance</h4>
+      <p>100% local deployment. No cloud dependency. Full data sovereignty and classification-level control.</p>
+      <div class="sol-comp-strip">
+        <span class="sol-comp-badge">NDAA</span><span class="sol-comp-badge">ISO 27001</span><span class="sol-comp-badge">Air-Gap</span>
+      </div>
+      <div class="sol-cta-btns">
+        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Demo →</button>
+        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to a Specialist</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ CAPABILITIES ════════════════════════════════════════════ -->
+<div class="grid-light" style="border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:88px 5%">
+<div class="container">
+  <div class="fade-up" style="text-align:center;max-width:580px;margin:0 auto">
+    <div class="eyebrow">Core AI Capabilities</div>
+    <h2 class="section-title">One platform. <strong>Every threat covered.</strong></h2>
+    <p class="section-sub" style="margin:14px auto 0;text-align:center">Every deployment includes our full AI capability stack — not limited modules.</p>
+  </div>
+  <div class="cap-grid stagger">
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M1 6v16l7-4 8 4 7-4V2l-7 4-8-4-7 4z"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg></div><h4>Perimeter Intrusion</h4><p>Detect fence breaches, unauthorised entry, and loitering before incidents escalate. Real-time alerts with 99.7% accuracy.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h4>Crowd Analytics</h4><p>Monitor crowd density, flow patterns, and dwell time. Predict and prevent crowd crush events before they happen.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h4>Vehicle Detection</h4><p>Classify vehicles by type, colour, and speed. Detect wrong-way driving, illegal parking, and abandoned vehicles.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div><h4>Heatmap &amp; Dwell</h4><p>Visualise occupancy patterns across your site. Optimise space usage and identify high-risk zones.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div><h4>Forensic Search</h4><p>Find any person, vehicle, or object across weeks of footage in under 1 second using natural language queries.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h4>Object Left / Removed</h4><p>Detect unattended bags, removed assets, and out-of-place objects. Critical for airports and public venues.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Zone Management</h4><p>Define virtual boundaries and get instant alerts when any person, vehicle, or object breaches a restricted area.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h4>Behaviour Detection</h4><p>Identify aggression, fighting, falls, loitering, and abnormal behaviours the instant they occur on screen.</p></div>
+    <div class="cap-card tilt-card"><div class="cap-icon"><svg viewBox="0 0 24 24"><path d="M21 2H3v16h5l3 3 3-3h7V2z"/></svg></div><h4>Smart Alerting</h4><p>Route alerts to the right team via Slack, Teams, SMS, email, or PagerDuty — with video evidence attached.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ INTEGRATION ECOSYSTEM ════════════════════════════════════ -->
+<div style="background:var(--navy4);padding:88px 5%;border-top:1px solid rgba(66,165,245,.1)">
+<div class="container">
+  <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto 48px">
+    <div class="eyebrow eyebrow-light">Open Architecture</div>
+    <h2 class="section-title" style="color:#fff">Seamlessly integrates with your <strong>current stack.</strong></h2>
+    <p style="color:rgba(255,255,255,.5);margin-top:14px">We don't replace your existing systems. MJ Innovations connects directly to your current VMS, access control, and notification pipelines.</p>
+  </div>
+  <div class="stagger" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center">
+    <div class="tilt-card glass-panel" style="background:rgba(255,255,255,.02);padding:30px;border-radius:12px;width:calc(25% - 15px);min-width:200px;text-align:center">
+      <div style="margin-bottom:12px;display:flex;justify-content:center;opacity:0.9"><svg viewBox="0 0 24 24" width="28" height="28" stroke="var(--blue-light)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg></div>
+      <h4 style="color:#fff;margin-bottom:8px">VMS Platforms</h4>
+      <p style="font-size:13px;color:rgba(255,255,255,.5)">Milestone, Genetec, Avigilon, ExacqVision.</p>
+    </div>
+    <div class="tilt-card glass-panel" style="background:rgba(255,255,255,.02);padding:30px;border-radius:12px;width:calc(25% - 15px);min-width:200px;text-align:center">
+      <div style="margin-bottom:12px;display:flex;justify-content:center;opacity:0.9"><svg viewBox="0 0 24 24" width="28" height="28" stroke="var(--blue-light)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v15"></path><path d="M4 20h16"></path><path d="M14 12v.01"></path></svg></div>
+      <h4 style="color:#fff;margin-bottom:8px">Access Control</h4>
+      <p style="font-size:13px;color:rgba(255,255,255,.5)">LenelS2, Gallagher, HID, Brivo, Kisi.</p>
+    </div>
+    <div class="tilt-card glass-panel" style="background:rgba(255,255,255,.02);padding:30px;border-radius:12px;width:calc(25% - 15px);min-width:200px;text-align:center">
+      <div style="margin-bottom:12px;display:flex;justify-content:center;opacity:0.9"><svg viewBox="0 0 24 24" width="28" height="28" stroke="var(--blue-light)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+      <h4 style="color:#fff;margin-bottom:8px">Alert Routing</h4>
+      <p style="font-size:13px;color:rgba(255,255,255,.5)">Slack, Teams, PagerDuty, Twilio SMS.</p>
+    </div>
+    <div class="tilt-card glass-panel" style="background:rgba(255,255,255,.02);padding:30px;border-radius:12px;width:calc(25% - 15px);min-width:200px;text-align:center">
+      <div style="margin-bottom:12px;display:flex;justify-content:center;opacity:0.9"><svg viewBox="0 0 24 24" width="28" height="28" stroke="var(--blue-light)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 8.5l-4 4"></path><path d="M5 21l6.5-6.5a4.5 4.5 0 1 0-6.5-6.5L2.5 10.5l11 11L16 19a4.5 4.5 0 1 0 6.5-6.5l-2.5-2.5"></path><path d="M8.5 4.5l-2.5 2.5"></path><path d="M19.5 15.5l-2.5 2.5"></path><path d="M15 13l-4 4"></path></svg></div>
+      <h4 style="color:#fff;margin-bottom:8px">Custom Webhooks</h4>
+      <p style="font-size:13px;color:rgba(255,255,255,.5)">Open REST APIs &amp; GraphQL endpoints.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ PROCESS ═════════════════════════════════════════════════ -->
+<div class="grid-white" style="border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:88px 5%">
+<div class="container">
+  <div class="fade-up" style="text-align:center;max-width:580px;margin:0 auto">
+    <div class="eyebrow">Deployment Process</div>
+    <h2 class="section-title">Live in <strong>under 30 minutes.</strong></h2>
+    <p class="section-sub" style="margin:14px auto 0;text-align:center">Streamlined onboarding eliminates weeks-long integrations. Up and detecting from day one.</p>
+  </div>
+  <div class="process-row stagger">
+    <div class="p-step tilt-card glass-panel" style="background:#fff"><div class="p-step-big">01</div><div class="p-step-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="p-step-label">STEP 01</div><h4>Connect Cameras</h4><p>Plug into existing CCTV or IP cameras via RTSP, ONVIF, or direct integration. Compatible with 3,000+ models. No firmware changes required.</p></div>
+    <div class="p-step tilt-card glass-panel" style="background:#fff"><div class="p-step-big">02</div><div class="p-step-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="p-step-label">STEP 02</div><h4>Define Zones &amp; Rules</h4><p>Draw virtual zones, set detection sensitivity, configure alert thresholds, and assign team routing — all from our web dashboard.</p></div>
+    <div class="p-step tilt-card glass-panel" style="background:#fff"><div class="p-step-big">03</div><div class="p-step-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 1 1 4.93 19.07"/></svg></div><div class="p-step-label">STEP 03</div><h4>AI Goes Live</h4><p>Vision AI begins analysing all feeds simultaneously within seconds. Self-calibrates to your environment for optimal accuracy from the first frame.</p></div>
+    <div class="p-step tilt-card glass-panel" style="background:#fff"><div class="p-step-big">04</div><div class="p-step-icon"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div><div class="p-step-label">STEP 04</div><h4>Alerts &amp; Insights</h4><p>Real-time alerts with video evidence via Slack, Teams, SMS, email, or PagerDuty. Analytics dashboard and forensic tools available 24/7.</p></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ TESTIMONIALS ════════════════════════════════════════════ -->
+<div style="background:var(--navy);padding:88px 5%">
+<div class="container">
+  <div class="fade-up" style="text-align:center;max-width:560px;margin:0 auto">
+    <div class="eyebrow eyebrow-light">Platform Testing</div>
+    <h2 class="section-title" style="color:#fff">Validation &amp; <strong>Benchmarks.</strong></h2>
+  </div>
+  <div class="testi-grid stagger">
+    <div class="testi-card tilt-card glass-panel" style="background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.1); box-shadow:none;"><div class="testi-stars">BENCHMARK: ACCURACY</div><p class="testi-text" style="color:rgba(255,255,255,.8);">In closed beta simulated environments, MJ Innovations achieved a 99.7% true positive detection rate for perimeter intrusion scenarios under low-light conditions.</p><div class="testi-author"><div class="testi-avatar" style="background:rgba(255,255,255,.1);"><svg viewBox="0 0 24 24" width="18" height="18" stroke="#fff" fill="none" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/></svg></div><div><div class="testi-name" style="color:#fff;">Internal Validation</div><div class="testi-role" style="color:var(--blue-pale);">R&amp;D Division</div></div></div></div>
+    <div class="testi-card tilt-card glass-panel" style="background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.1); box-shadow:none;"><div class="testi-stars">BENCHMARK: LATENCY</div><p class="testi-text" style="color:rgba(255,255,255,.8);">Across a simulated network of 48 HD camera feeds, the alert engine consistently dispatched multi-channel alerts (SMS, Slack) in &lt;280ms from event occurrence.</p><div class="testi-author"><div class="testi-avatar" style="background:rgba(255,255,255,.1);"><svg viewBox="0 0 24 24" width="18" height="18" stroke="#fff" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="testi-name" style="color:#fff;">Load Testing</div><div class="testi-role" style="color:var(--blue-pale);">Infrastructure Team</div></div></div></div>
+    <div class="testi-card tilt-card glass-panel" style="background:rgba(255,255,255,.03); border-color:rgba(255,255,255,.1); box-shadow:none;"><div class="testi-stars">BENCHMARK: DEPLOYMENT</div><p class="testi-text" style="color:rgba(255,255,255,.8);">The MJ-Vision edge node integration was successfully verified to connect, stream, and begin processing RTSP feeds in under 22 minutes without firmware modifications.</p><div class="testi-author"><div class="testi-avatar" style="background:rgba(255,255,255,.1);"><svg viewBox="0 0 24 24" width="18" height="18" stroke="#fff" fill="none" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg></div><div><div class="testi-name" style="color:#fff;">Integration Testing</div><div class="testi-role" style="color:var(--blue-pale);">Deployment Engineering</div></div></div></div>
+  </div>
+</div>
+</div>
+
+<!-- ══ COMPLIANCE ══════════════════════════════════════════════ -->
+<div class="grid-white" style="border-top:1px solid var(--border-light);padding:88px 5%">
+<div class="container">
+  <div class="comp-two fade-up">
+    <div>
+      <div class="eyebrow">Compliance &amp; Standards</div>
+      <h2 class="section-title">Built to the world's <strong>strictest standards.</strong></h2>
+      <p style="font-size:15px;color:var(--text-mid);line-height:1.75;margin-top:14px;max-width:420px">Designed from the ground up for compliance across global regulatory frameworks. Every deployment is audit-ready from day one.</p>
+      <div class="comp-badges">
+        <span class="cbadge">GDPR</span><span class="cbadge">CCPA</span><span class="cbadge">HIPAA</span>
+        <span class="cbadge">ISO 27001</span><span class="cbadge">SOC 2 Type II</span>
+        <span class="cbadge">NDAA</span><span class="cbadge">SIL 2</span><span class="cbadge">ISO 45001</span>
+      </div>
+    </div>
+    <div class="stats-grid stagger" style="grid-template-columns:repeat(2,1fr)">
+      <div class="stat-box"><div class="stat-num">30m</div><div class="stat-label">Avg Deploy Time</div></div>
+      <div class="stat-box"><div class="stat-num">50+</div><div class="stat-label">Integrations</div></div>
+      <div class="stat-box"><div class="stat-num">99.9%</div><div class="stat-label">Uptime SLA</div></div>
+      <div class="stat-box"><div class="stat-num">0</div><div class="stat-label">Data Shared Externally</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ══ CTA ═════════════════════════════════════════════════════ -->
+<div class="cta-strip">
+  <div class="cta-glow"></div><div class="cta-border-tl"></div><div class="cta-border-br"></div>
+  <div class="cta-strip-inner">
+    <div class="cta-eyebrow"><span class="cta-eyebrow-dot"></span>Ready to Deploy</div>
+    <h2>Find your <strong>solution.</strong></h2>
+    <p>Speak with an industry specialist and get a custom deployment plan tailored to your environment.</p>
+    <div class="cta-btns">
+      <button class="btn-primary" onclick="location.href='contact.html'">Contact a Specialist →</button>
+      <button class="btn-secondary-light" onclick="location.href='technology.html'">Explore Technology</button>
+    </div>
+    <div class="cta-trust">
+      <div class="cta-trust-item"><span class="cta-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></span>30-min deployment</div>
+      <div class="cta-trust-item"><span class="cta-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Zero data shared externally</div>
+      <div class="cta-trust-item"><span class="cta-trust-icon"><svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Works with existing cameras</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC">
+      <p>AI-powered video surveillance for the world's most security-conscious organizations. Where Innovation Meets Intelligence.</p>
+      <div class="footer-socials">
+        <a class="fsoc" href="#" aria-label="X / Twitter"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4l16 16M4 20L20 4"/></svg></a>
+        <a class="fsoc" href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="7.5"/><path d="M12 11v6M12 11a3 3 0 016 0v6"/></svg></a>
+        <a class="fsoc" href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="14" rx="4"/><polygon points="10,9 16,13 10,17" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h5>Products</h5><ul><li><a href="technology.html">Vision AI</a></li><li><a href="technology.html">Behavior Analytics</a></li><li><a href="technology.html">Alert System</a></li><li><a href="technology.html">Device X</a></li></ul></div>
+    <div class="footer-col"><h5>Solutions</h5><ul><li><a href="#sol-cities">Smart Cities</a></li><li><a href="#sol-retail">Retail &amp; Banking</a></li><li><a href="#sol-government">Government</a></li><li><a href="#sol-healthcare">Healthcare</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="get-demo.html">Get a Demo</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms of Service</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>MJ Innovations FZ LLC &copy; 2026 &middot; Where Innovation Meets Intelligence</p>
+    <div class="footer-devbadge"><span class="dev-heart"><svg viewBox="0 0 24 24" width="12" height="12" stroke="currentColor" fill="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-top:-2px"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></span> Designed &amp; Developed by <a href="https://developedge.wuaze.com/" target="_blank" rel="noopener noreferrer">DevelopEdge</a></div>
+    <div class="footer-bottom-links"><a href="privacy-policy.html">Privacy</a><a href="terms-conditions.html">Terms</a></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+function scrollToSol(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  /* nav height + tab bar height — adjusted for mobile */
+  const isMobile = window.innerWidth <= 768;
+  const navH  = isMobile ? 60 : 70;
+  const tabH  = document.querySelector('.sol-tabs-wrap')?.offsetHeight || 48;
+  const offset = navH + tabH + 8;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - offset, behavior: 'smooth' });
+}
+/* Highlight active tab on scroll */
+const solIds = ['sol-cities','sol-airports','sol-retail','sol-healthcare','sol-manufacturing','sol-government'];
+const solTabs = document.querySelectorAll('.sol-tab');
+function updateTabs() {
+  let active = 0;
+  solIds.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= 130) active = i;
+  });
+  solTabs.forEach((t, i) => t.classList.toggle('active', i === active));
+}
+window.addEventListener('scroll', updateTabs, { passive: true });
+</script>
+</body>
+</html>

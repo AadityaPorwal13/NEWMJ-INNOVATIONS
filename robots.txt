@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /assets/videos/
+Disallow: /js/
+
+Sitemap: https://mjinnovations.ai/sitemap.xml

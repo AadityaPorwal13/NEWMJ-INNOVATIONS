@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Book a Free Demo — MJ Innovations FZ LLC</title>
+<meta name="description" content="Book a personalised 30-minute live demo of MJ Innovations AI video surveillance.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.demo-wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:72px;align-items:start;max-width:1100px;margin:0 auto}
+.demo-left h2{font-family:var(--font-head);font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:200;letter-spacing:-.04em;color:#fff;margin-bottom:12px}
+.demo-left h2 strong{font-weight:900}
+.demo-left>p{font-size:15px;color:rgba(255,255,255,.5);line-height:1.78;margin-bottom:28px}
+.expect-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:32px}
+.el-item{display:flex;gap:14px;align-items:flex-start}
+.el-num{font-family:var(--font-mono);font-size:11px;color:var(--blue-light);padding-top:2px;flex-shrink:0;width:22px}
+.el-item h4{font-family:var(--font-head);font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
+.el-item p{font-size:13px;color:rgba(255,255,255,.45);line-height:1.55}
+.demo-badges{display:flex;flex-wrap:wrap;gap:8px;padding-top:24px;border-top:1px solid rgba(66,165,245,.12)}
+.db-badge{padding:6px 14px;border:1px solid rgba(66,165,245,.2);border-radius:5px;font-family:var(--font-head);font-size:11px;font-weight:600;color:var(--blue-pale);letter-spacing:.05em;background:rgba(66,165,245,.07)}
+.form-card{background:#071528;border:1px solid rgba(66,165,245,.12);border-radius:16px;padding:36px}
+.form-card h3{font-family:var(--font-head);font-size:17px;font-weight:700;color:#fff;margin-bottom:4px}
+.form-card>.sub{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:26px;font-family:var(--font-head)}
+.fg{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}
+.fg label{font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.fg input,.fg select{background:rgba(255,255,255,.04);border:1px solid rgba(66,165,245,.15);border-radius:7px;padding:12px 14px;font-family:var(--font-body);font-size:14px;color:#fff;outline:none;transition:border-color .2s;width:100%}
+.fg input:focus,.fg select:focus{border-color:rgba(66,165,245,.45);box-shadow:0 0 0 3px rgba(66,165,245,.07)}
+.fg input::placeholder{color:rgba(255,255,255,.2)}
+.fg select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2342A5F5' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.fg select option{background:#042D6B;color:#fff}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-note{font-size:11.5px;color:rgba(255,255,255,.25);text-align:center;margin-top:10px;font-family:var(--font-head)}
+.success-wrap{display:none;text-align:center;padding:16px 0}
+.success-wrap .s-icon{display:inline-flex;width:60px;height:60px;border-radius:50%;background:rgba(74,222,128,.1);border:2px solid rgba(74,222,128,.3);align-items:center;justify-content:center;margin-bottom:18px}
+.success-wrap .s-icon svg{width:28px;height:28px;stroke:#4ade80;fill:none;stroke-width:2.5}
+.success-wrap h3{font-family:var(--font-head);font-size:22px;font-weight:700;color:#fff;margin-bottom:10px}
+.success-wrap p{font-size:14px;color:rgba(255,255,255,.45);line-height:1.65}
+@media(max-width:900px){.demo-wrap{grid-template-columns:1fr;gap:48px}}
+@media(max-width:480px){.form-row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo-wrap"><img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li><li><a href="solutions.html">Solutions</a></li>
+    <li><a href="technology.html">Technology</a></li><li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-cta-group">
+    <button class="btn-nav-outline" onclick="location.href='contact.html'">Contact Sales</button>
+    <button class="btn-nav-fill" onclick="location.href='get-demo.html'">Get Demo →</button>
+  </div>
+  <button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <a href="index.html">Home</a><a href="solutions.html">Solutions</a><a href="technology.html">Technology</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+  <div class="drawer-cta"><button class="btn-primary" style="width:100%;justify-content:center" onclick="location.href='get-demo.html'">Get a Demo →</button></div>
+</div>
+
+<div class="page-hero">
+  <div class="hero-glow-orb"></div>
+  <div class="hero-glow-orb-2"></div>
+  <div class="page-hero-inner fade-up">
+    <div class="eyebrow eyebrow-light">Book a Free Demo</div>
+    <h1 class="reveal-text"><span>See the AI in <strong>action.</strong></span></h1>
+    <p>A personalised 30-minute live demo with one of our AI security engineers. No sales pitch — just your cameras, our AI, real results.</p>
+  </div>
+</div>
+
+<div style="background:var(--navy);padding:88px 5%">
+  <div class="demo-wrap">
+    <div class="demo-left fade-up">
+      <h2>What to expect from your <strong>demo.</strong></h2>
+      <p>Our engineers walk you through a live deployment — and show exactly what MJ Innovations can do for your environment.</p>
+      <ul class="expect-list">
+        <li class="el-item"><span class="el-num">01</span><div><h4>Live AI Detection</h4><p>Watch Vision AI detect and classify objects in real time on your own feed or our demo environment.</p></div></li>
+        <li class="el-item"><span class="el-num">02</span><div><h4>Behaviour Analytics Demo</h4><p>See loitering detection, crowd analysis, and zone breach alerts trigger live.</p></div></li>
+        <li class="el-item"><span class="el-num">03</span><div><h4>Alert System Walkthrough</h4><p>Experience the full alert pipeline — detection to multi-channel notification in under 300ms.</p></div></li>
+        <li class="el-item"><span class="el-num">04</span><div><h4>Custom Deployment Plan</h4><p>We outline a tailored plan for your specific environment and security requirements.</p></div></li>
+      </ul>
+      <div style="font-family:var(--font-head);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:12px">Included in every demo</div>
+      <div class="demo-badges">
+        <span class="db-badge">30 Min Session</span>
+        <span class="db-badge">No Credit Card</span>
+        <span class="db-badge">Live Q&amp;A</span>
+        <span class="db-badge">Custom Proposal</span>
+        <span class="db-badge">No Obligation</span>
+      </div>
+    </div>
+    <div class="scale-in" style="transition-delay:.15s">
+      <div class="form-card glass-panel glow-border">
+        <h3>Book your free demo</h3>
+        <div class="sub">Usually confirmed within 2 hours</div>
+        <div id="demo-form">
+          <form onsubmit="handleDemo(event)">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-row">
+              <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="Jessica" required></div>
+              <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Smith" required></div>
+            </div>
+            <div class="fg"><label>Work Email</label><input type="email" name="email" placeholder="jessica@company.com" required></div>
+            <div class="fg"><label>Company</label><input type="text" name="company" placeholder="Your organisation" required></div>
+            <div class="fg"><label>Number of Cameras</label>
+              <select name="camera_range" required>
+                <option value="" disabled selected>Select range</option>
+                <option>1–10 cameras</option><option>11–50 cameras</option>
+                <option>51–200 cameras</option><option>200–1000 cameras</option><option>1000+ cameras</option>
+              </select>
+            </div>
+            <div class="fg"><label>Industry</label>
+              <select name="industry" required>
+                <option value="" disabled selected>Select your industry</option>
+                <option>Smart Cities / Government</option><option>Airports &amp; Transit</option>
+                <option>Retail &amp; Banking</option><option>Healthcare</option>
+                <option>Manufacturing</option><option>Other</option>
+              </select>
+            </div>
+            <div class="fg"><label>Preferred Time</label>
+              <select name="preferred_time">
+                <option value="" disabled selected>Select preference</option>
+                <option>Morning (9am–12pm GST)</option><option>Afternoon (12pm–5pm GST)</option>
+                <option>Evening (5pm–8pm GST)</option><option>Flexible</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary" id="demo-submit-btn" style="width:100%;justify-content:center;font-size:15px;padding:15px;margin-top:4px">Book My Free Demo →</button>
+            <p class="form-note">🔒 Your data is secure. We never share your information.</p>
+          </form>
+        </div>
+        <div class="success-wrap" id="demo-success">
+          <div class="s-icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <h3>Demo Booked!</h3>
+          <p>One of our AI security engineers will reach out within 2 hours to confirm your demo time. Check your email for a calendar invite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--bg-grid);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:72px 5%">
+<div class="container">
+  <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto 52px">
+    <div class="eyebrow">Pioneering Security</div>
+    <h2 class="section-title">Be among the <strong>first to deploy</strong> next-gen AI.</h2>
+  </div>
+  <div class="stats-grid stagger">
+    <div class="stat-box tilt-card glass-panel" style="background:#fff"><div class="stat-num" data-count="14" data-suffix="+">14+</div><div class="stat-label">AI Models Built-in</div></div>
+    <div class="stat-box tilt-card glass-panel" style="background:#fff"><div class="stat-num" data-prefix="<" data-count="300" data-suffix="ms">&lt;300ms</div><div class="stat-label">Alert Latency</div></div>
+    <div class="stat-box tilt-card glass-panel" style="background:#fff"><div class="stat-num" data-count="30" data-suffix="min">30min</div><div class="stat-label">To Deploy</div></div>
+    <div class="stat-box tilt-card glass-panel" style="background:#fff"><div class="stat-num" data-count="99.7" data-suffix="%">99.7%</div><div class="stat-label">Accuracy</div></div>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand"><img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC"><p>AI-powered video surveillance. Where Innovation Meets Intelligence.</p>      <div class="footer-socials">
+        <a class="fsoc" href="#" aria-label="X / Twitter">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M4 4l16 16M4 20L20 4"/>
+          </svg>
+        </a>
+        <a class="fsoc" href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="4"/>
+            <line x1="8" y1="11" x2="8" y2="17"/><line x1="8" y1="7" x2="8" y2="7.5"/>
+            <path d="M12 11v6M12 11a3 3 0 016 0v6"/>
+          </svg>
+        </a>
+        <a class="fsoc" href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="6" width="20" height="14" rx="4"/>
+            <polygon points="10,9 16,13 10,17" fill="currentColor" stroke="none"/>
+          </svg>
+        </a>
+      </div></div>
+    <div class="footer-col"><h5>Products</h5><ul><li><a href="technology.html">Vision AI</a></li><li><a href="technology.html">Behavior Analytics</a></li><li><a href="technology.html">Alert System</a></li><li><a href="technology.html">Device X</a></li></ul></div>
+    <div class="footer-col"><h5>Solutions</h5><ul><li><a href="solutions.html">Smart Cities</a></li><li><a href="solutions.html">Retail &amp; Banking</a></li><li><a href="solutions.html">Infrastructure</a></li><li><a href="solutions.html">Healthcare</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms of Service</a></li></ul></div>
+  </div>
+    <div class="footer-bottom">
+    <p>MJ Innovations FZ LLC &copy; 2026 &middot; Where Innovation Meets Intelligence</p>
+    <div class="footer-bottom-links">
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-conditions.html">Terms</a>
+    </div>
+    <div class="footer-devbadge">
+      <span class="dev-heart">&#10084;</span>
+      Designed &amp; Developed by
+      <a href="https://developedge.wuaze.com/" target="_blank" rel="noopener noreferrer">DevelopEdge</a>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+function handleDemo(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn = document.getElementById('demo-submit-btn');
+  const originalText = btn.innerText;
+  
+  btn.innerText = 'Processing...';
+  btn.disabled = true;
+
+  const formData = new FormData(form);
+
+  fetch('get-demo.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      document.getElementById('demo-form').style.display='none';
+      document.getElementById('demo-success').style.display='block';
+    } else {
+      alert('Error: ' + data.message);
+      btn.innerText = originalText;
+      btn.disabled = false;
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('An error occurred. Please try again.');
+    btn.innerText = originalText;
+    btn.disabled = false;
+  });
+}
+</script>
+</body></html>
