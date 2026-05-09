@@ -834,7 +834,7 @@ img { max-width: 100%; display: block; }
 ══════════════════════════════════ */
 footer { background:var(--navy); color:#fff; border-top:1px solid rgba(66,165,245,0.12); }
 .footer-main {
-  padding:70px 5% 48px; max-width:1360px; margin:0 auto;
+  padding:70px 5% 48px; max-width:1860px; margin:0 auto;
   display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr; gap:48px;
 }
 .footer-brand img { height:52px; width:auto; margin-bottom:20px; }
@@ -846,7 +846,7 @@ footer { background:var(--navy); color:#fff; border-top:1px solid rgba(66,165,24
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
 .footer-col a { font-size:13.5px; color:rgba(255,255,255,0.5); transition:color 0.2s; }
 .footer-col a:hover { color:var(--blue-light); }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding:22px 5%; display:flex; align-items:center; justify-content:space-between; max-width:1360px; margin:0 auto; }
+.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding:22px 5%; display:flex; align-items:center; justify-content:space-between; max-width:1999px; margin:0 auto; }
 .footer-bottom p { font-size:12.5px; color:rgba(255,255,255,0.25); }
 .footer-bottom-links { display:flex; gap:20px; }
 .footer-bottom-links a { font-size:12px; color:rgba(255,255,255,0.25); transition:color 0.2s; }
@@ -1042,6 +1042,160 @@ footer { background:var(--navy); color:#fff; border-top:1px solid rgba(66,165,24
 }
 .footer-devbadge a:hover { color: #fff; border-color: #fff; }
 .footer-devbadge .dev-heart { color: #f87171; }
+
+/* ── DevelopEdge shine (global, all sizes) ── */
+.footer-devbadge {
+  font-family: var(--font-head);
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+  display: flex; align-items: center; gap: 5px;
+  letter-spacing: 0.02em;
+}
+.footer-devbadge .dev-heart {
+  color: #f87171;
+  animation: heart-beat 1.8s ease-in-out infinite;
+}
+@keyframes heart-beat {
+  0%,100% { transform: scale(1); }
+  30%      { transform: scale(1.3); }
+  60%      { transform: scale(0.95); }
+}
+/* The shining link */
+.footer-devbadge a {
+  position: relative; display: inline-block;
+  font-weight: 700; font-size: 12.5px;
+  text-decoration: none; letter-spacing: 0.04em;
+  /* Base gradient text */
+  background: linear-gradient(
+    90deg,
+    #90CAF9 0%,
+    #ffffff 35%,
+    #42A5F5 50%,
+    #ffffff 65%,
+    #90CAF9 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: dev-shine 3.5s linear infinite;
+}
+@keyframes dev-shine {
+  0%   { background-position: 200% center; }
+  100% { background-position: -50% center; }
+}
+.footer-devbadge a:hover {
+  animation: dev-shine 1.2s linear infinite;
+  filter: drop-shadow(0 0 6px rgba(66,165,245,0.7));
+}
+
+/* ── MOBILE FOOTER (≤768px) ── */
+@media (max-width: 768px) {
+
+  footer {
+    position: relative; overflow: hidden;
+  }
+
+  /* Subtle glow inside footer on mobile */
+  footer::before {
+    content: ''; position: absolute;
+    bottom: -60px; left: 50%; transform: translateX(-50%);
+    width: 400px; height: 200px; border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(66,165,245,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  /* Grid → stacked with accordion-style columns */
+  .footer-main {
+    grid-template-columns: 1fr !important;
+    padding: 52px 5% 32px;
+    gap: 0 !important;
+  }
+
+  /* Brand block */
+  .footer-brand {
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 28px; margin-bottom: 0;
+  }
+  .footer-brand img { margin: 0 auto 16px; height: 48px; }
+  .footer-brand p { max-width: 100%; font-size: 13px; margin-bottom: 20px; }
+  .footer-socials { justify-content: center; gap: 12px; }
+  .fsoc {
+    width: 40px; height: 40px;
+    border-color: rgba(66,165,245,0.25);
+    border-radius: 8px;
+  }
+
+  /* Column links — collapsible feel with top border */
+  .footer-col {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    padding: 18px 0;
+  }
+  .footer-col:last-child { border-bottom: none; }
+  .footer-col h5 {
+    font-size: 10px; letter-spacing: 0.16em;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 12px;
+  }
+  .footer-col ul {
+    flex-direction: row !important;
+    flex-wrap: wrap; gap: 8px 20px;
+  }
+  .footer-col a {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+  }
+  .footer-col a:hover { color: #42A5F5; }
+
+  /* Bottom bar — stacked, centered */
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+    text-align: center;
+    padding: 20px 5% 28px;
+    border-top: 1px solid rgba(66,165,245,0.12) !important;
+  }
+  .footer-bottom p {
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.2);
+    order: 3;
+  }
+  .footer-bottom-links {
+    gap: 16px; order: 2;
+  }
+  .footer-bottom-links a {
+    font-size: 11.5px; color: rgba(255,255,255,0.3);
+  }
+
+  /* DevelopEdge badge — centered, prominent on mobile */
+  .footer-devbadge {
+    order: 1;
+    justify-content: center;
+    font-size: 12px;
+    padding: 8px 18px;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(66,165,245,0.15);
+    border-radius: 999px;
+    gap: 6px;
+  }
+  .footer-devbadge a {
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    animation: dev-shine 2.5s linear infinite; /* faster on mobile */
+  }
+  .footer-devbadge .dev-heart { font-size: 13px; }
+}
+
+/* ── EXTRA SMALL (≤420px) ── */
+@media (max-width: 420px) {
+  .footer-main { padding: 44px 4% 24px; }
+  .footer-col ul { flex-direction: column !important; gap: 8px; }
+  .footer-bottom { padding: 18px 4% 24px; }
+  .footer-devbadge { font-size: 11.5px; }
+  .footer-devbadge a { font-size: 12.5px; }
+}
 
 /* ══════════════════════════════════
    LOGO ICON SVG fix
