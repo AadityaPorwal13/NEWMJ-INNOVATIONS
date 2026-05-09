@@ -42,13 +42,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'apshow96@gmail.com';
-        $mail->Password   = '';
+        $mail->Password   = 'ynqi xvpb brjb thvk';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // 6. Recipients
         $mail->setFrom('apshow96@gmail.com', 'MJ Innovations Demo Requests');
-        $mail->addAddress('', 'MJ Innovations Sales');
+        $mail->addAddress('porwalaaditya6@gmail.com', 'MJ Innovations Sales');
         $mail->addReplyTo($email, "$firstName $lastName");
 
         // 7. Email Formatting
