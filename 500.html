@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>500 — Server Error | MJ Innovations FZ LLC</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;700;800&family=Roboto+Mono:wght@400;500&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+body{
+  background:#033279;
+  background-image:
+    linear-gradient(rgba(66,165,245,.055) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(66,165,245,.055) 1px,transparent 1px);
+  background-size:55px 55px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:100vh;padding:40px 5%;position:relative;
+}
+
+/* Glow */
+.bg-glow{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:700px;height:500px;border-radius:50%;pointer-events:none;
+  background:radial-gradient(ellipse,rgba(248,113,113,0.12) 0%,transparent 65%);
+}
+
+/* Scan line */
+.scan-line{
+  position:fixed;left:0;right:0;height:1.5px;
+  background:linear-gradient(90deg,transparent,rgba(248,113,113,0.5),transparent);
+  animation:scan 10s linear infinite;pointer-events:none;
+}
+@keyframes scan{0%{top:-2px}100%{top:100vh}}
+
+/* Corner brackets */
+.corner{position:fixed;width:52px;height:52px;pointer-events:none}
+.c-tl{top:20px;left:20px;border-top:2px solid rgba(248,113,113,0.4);border-left:2px solid rgba(248,113,113,0.4)}
+.c-tr{top:20px;right:20px;border-top:2px solid rgba(248,113,113,0.4);border-right:2px solid rgba(248,113,113,0.4)}
+.c-bl{bottom:20px;left:20px;border-bottom:2px solid rgba(248,113,113,0.15);border-left:2px solid rgba(248,113,113,0.15)}
+.c-br{bottom:20px;right:20px;border-bottom:2px solid rgba(248,113,113,0.15);border-right:2px solid rgba(248,113,113,0.15)}
+
+/* Main card */
+.card{
+  position:relative;z-index:2;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(248,113,113,0.25);
+  border-radius:20px;padding:52px 48px;
+  max-width:580px;width:100%;
+  text-align:center;
+  box-shadow:0 32px 80px rgba(0,0,0,0.3),0 0 0 1px rgba(248,113,113,0.08);
+  backdrop-filter:blur(8px);
+  animation:card-in .6s cubic-bezier(.25,.46,.45,.94) both;
+}
+@keyframes card-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+.card::before{
+  content:'';position:absolute;top:0;left:15%;right:15%;height:2px;
+  background:linear-gradient(90deg,transparent,#f87171,transparent);
+  border-radius:2px;
+}
+
+/* Error code */
+.error-code{
+  font-size:96px;font-weight:900;letter-spacing:-.06em;line-height:1;
+  background:linear-gradient(135deg,#fff 0%,#f87171 60%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;margin-bottom:4px;
+  animation:pulse-num 3s ease-in-out infinite;
+}
+@keyframes pulse-num{0%,100%{opacity:1}50%{opacity:.85}}
+
+/* Label chip */
+.label-chip{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:5px 14px;border-radius:999px;
+  background:rgba(248,113,113,0.1);border:1px solid rgba(248,113,113,0.3);
+  font-family:'Roboto Mono',monospace;font-size:10px;font-weight:500;
+  color:#f87171;letter-spacing:.12em;margin-bottom:24px;
+}
+.chip-dot{
+  width:7px;height:7px;border-radius:50%;
+  background:#f87171;
+  box-shadow:0 0 6px #f87171;
+  animation:blink .9s step-end infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+
+/* Icon */
+.icon-ring{
+  width:80px;height:80px;border-radius:50%;margin:0 auto 24px;
+  background:rgba(248,113,113,0.1);border:2px solid rgba(248,113,113,0.35);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;
+  animation:float 6s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.icon-ring::before{
+  content:'';position:absolute;inset:-8px;border-radius:50%;
+  border:1px solid rgba(248,113,113,0.15);
+  animation:ring-expand 2s ease-out infinite;
+}
+@keyframes ring-expand{0%{transform:scale(1);opacity:.6}100%{transform:scale(1.5);opacity:0}}
+.icon-ring svg{width:34px;height:34px;stroke:#f87171;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* Text */
+h1{
+  font-size:clamp(1.9rem,5vw,2.8rem);font-weight:200;
+  letter-spacing:-.04em;color:#fff;line-height:1.1;margin-bottom:14px;
+}
+h1 strong{font-weight:800}
+p{font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:36px;max-width:420px;margin-left:auto;margin-right:auto}
+
+/* CTAs */
+.ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-p{
+  padding:13px 26px;border:none;border-radius:9px;
+  background:linear-gradient(135deg,#033279,#1B4FA8,#42A5F5);
+  font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:.06em;text-transform:uppercase;color:#fff;cursor:pointer;
+  text-decoration:none;display:inline-block;
+  box-shadow:0 6px 20px rgba(3,50,121,.45);
+  transition:transform .15s,box-shadow .2s,opacity .2s;
+}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(3,50,121,.6);opacity:.92}
+.btn-s{
+  padding:12px 24px;border:1.5px solid rgba(255,255,255,.2);border-radius:9px;
+  background:transparent;
+  font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;
+  letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.75);cursor:pointer;
+  text-decoration:none;display:inline-block;
+  transition:border-color .2s,color .2s,background .2s;
+}
+.btn-s:hover{border-color:rgba(255,255,255,.5);color:#fff;background:rgba(255,255,255,.06)}
+
+/* Nav logo */
+.nav-logo{
+  position:fixed;top:22px;left:50%;transform:translateX(-50%);
+  z-index:10;opacity:.7;transition:opacity .2s;
+}
+.nav-logo:hover{opacity:1}
+.nav-logo img{height:40px;width:auto}
+
+/* Status line at bottom */
+.status-line{
+  position:fixed;bottom:0;left:0;right:0;
+  background:rgba(3,50,121,.85);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(248,113,113,0.2);
+  padding:10px 5%;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;z-index:5;
+}
+.sl-item{display:flex;align-items:center;gap:7px;font-family:'Roboto Mono',monospace;font-size:10px;color:rgba(255,255,255,.35)}
+.sl-dot{width:6px;height:6px;border-radius:50%;background:#f87171;box-shadow:0 0 5px #f87171;animation:blink .9s step-end infinite}
+.sl-val{color:rgba(255,255,255,.65);font-weight:500}
+
+@media(max-width:520px){
+  .card{padding:36px 24px}
+  .error-code{font-size:72px}
+  h1{font-size:1.7rem}
+  .status-line{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div class="scan-line"></div>
+<div class="corner c-tl"></div>
+<div class="corner c-tr"></div>
+<div class="corner c-bl"></div>
+<div class="corner c-br"></div>
+
+<a href="index.html" class="nav-logo">
+  <img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC">
+</a>
+
+<div class="card">
+  <div class="error-code">500</div>
+  <div class="label-chip"><span class="chip-dot"></span>INTERNAL SERVER ERROR</div>
+
+  <div class="icon-ring">
+    <svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9zM13 2v7h7M10 12l2 2 4-4"/></svg>
+  </div>
+
+  <h1>Something went<br><strong>wrong.</strong></h1>
+  <p>An unexpected server error occurred. Our engineering team has been automatically notified. The issue is being investigated — please try again in a few minutes.</p>
+
+  <div class="ctas">
+    <a href="javascript:location.reload()" class="btn-p">Try Again</a>
+    <a href="contact.html" class="btn-s">Contact Support</a>
+  </div>
+</div>
+
+<div class="status-line">
+  <div class="sl-item"><span class="sl-dot"></span><span>ERROR <span class="sl-val">500</span></span></div>
+  <div class="sl-item"><span>MJ Innovations FZ LLC</span></div>
+  <div class="sl-item"><span>mjinnovations.net</span></div>
+</div>
+
+</body>
+</html>
