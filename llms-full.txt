@@ -1,0 +1,345 @@
+# MJ Innovations FZ LLC — Full Content Mirror
+**URL:** https://mjinnovations.net  
+**Last Updated:** 2026  
+**Format:** Markdown mirror for LLM indexing (llms-full.txt)
+
+---
+
+## Page: Home
+**URL:** https://mjinnovations.net/
+
+### Hero
+**Headline:** AI that Sees Every Threat. Instantly.
+
+MJ Innovations transforms your camera infrastructure into a proactive AI intelligence layer — detecting threats, analyzing behavior, and alerting your team before incidents escalate.
+
+**CEO Quote:**
+> "At MJ Innovations, we operate at the intersection of ideas and intelligence — where innovation meets intelligence to create meaningful impact for our clients."
+> — Jessica, CEO & Founder
+
+**Key Metrics:**
+- 99.7% Detection Accuracy
+- <300ms Alert Latency
+- 24/7 Autonomous Monitoring
+
+---
+
+### Core Capabilities
+
+**Autonomous Detection**  
+Our AI watches every camera simultaneously — 24/7, without fatigue. Detect people, vehicles, objects, and behaviors the instant they appear in frame. Real-time multi-camera monitoring. Automated threat classification. Works with existing cameras.
+
+**Autonomous Behavior Analysis**  
+Context-aware AI detects loitering, crowd anomalies, restricted zone breaches, and abnormal patterns before they become incidents. Crowd density & flow mapping. Abnormal behavior detection. Restricted zone enforcement.
+
+---
+
+### MJ Device X
+MJ Device X is a plug-and-play AI edge processor that connects to any existing camera — CCTV, IP, analog, or PTZ — and instantly upgrades it to a full AI-powered surveillance node.
+
+**How it works:**
+1. Connect to any camera via USB-C, PoE, or HDMI — setup under 90 seconds
+2. 12 TOPS on-device neural processor runs MJ Vision AI models at <18ms per frame, no cloud latency
+3. AES-256 encrypted sync — only intelligence transmitted, footage stays on-site
+4. Real-time alerts to security dashboard, Slack, Teams, or PagerDuty within 300ms
+
+**Specs:** 12 TOPS Edge NPU · <18ms inference · 4K 30fps · PoE + USB-C · 14 on-device models · 64GB eMMC · 8W max · −20°C to 65°C · CE · FCC · RoHS · ISO 27001 · NDAA
+
+**Compatible:** Analog CCTV · IP/Network (ONVIF) · PTZ · Thermal/IR · Enterprise VMS (Milestone, Genetec, Avigilon, Hikvision)
+
+---
+
+### Core Values
+- Privacy-First Architecture — on-premise or private cloud, GDPR & CCPA compliant
+- Zero False-Positive Tuning — domain-trained models reduce alert fatigue
+- 24/7 Autonomous Watch — AI never blinks, never tires
+- Works With Existing Cameras — no hardware replacement
+- Deep Forensic Search — find any moment in seconds
+- Seamless Integrations — Slack, Teams, PagerDuty, open API
+
+---
+
+### Platform Statistics
+- 500+ Enterprise Deployments (projected capacity)
+- 2.4M Cameras Supportable
+- 99.7% Detection Accuracy
+- <300ms Alert Latency
+
+---
+
+## Page: Solutions
+**URL:** https://mjinnovations.net/solutions.html
+
+### Solution 01 — Urban Intelligence & Smart Cities
+City-wide AI surveillance networks that monitor public spaces, detect incidents, and assist emergency services in real time — reducing crime rates and improving response times dramatically.
+
+**Capabilities:** City-wide camera network management · Crowd surge & riot early detection · Traffic & pedestrian flow analytics · Emergency services integration · Vehicle tracking & plate recognition · Incident detection & real-time alerts
+
+**Results:** 40% average crime reduction · 3× faster emergency response · 24/7 autonomous monitoring
+
+**Compliance:** GDPR · ISO 27001 · On-Premise
+
+---
+
+### Solution 02 — Airports, Rail & Transit Hubs
+AI surveillance engineered for high-throughput, high-stakes transportation environments. Monitor terminals, platforms, and perimeters with zero manual oversight required.
+
+**Capabilities:** Unattended baggage detection · Perimeter & airside security · Queue management analytics · VIP & threat profile tracking · Passport & boarding gate monitoring
+
+**Results:** <0.3s alert latency · 99.7% detection accuracy · 360° coverage
+
+**Compliance:** NDAA · TSA Ready · ISO 27001
+
+---
+
+### Solution 03 — Retail, Banking & Financial
+Protect assets and customers while gaining powerful business intelligence. Detect theft, fraud patterns, and safety hazards while analysing customer flow and dwell time.
+
+**Capabilities:** Shoplifting & theft detection · ATM skimming & fraud alerts · Customer heatmap analytics · After-hours intrusion detection · Staff safety monitoring
+
+**Results:** 60% theft reduction · 2.4× ROI in year one · Zero manual oversight required
+
+**Compliance:** PCI DSS · GDPR · SOC 2
+
+---
+
+### Solution 04 — Healthcare & Medical Facilities
+Patient safety and asset protection in sensitive environments. Monitor wards, detect falls, enforce restricted zones, and protect staff — with strict privacy compliance.
+
+**Capabilities:** Patient fall & distress detection · Restricted zone access control · Asset tracking & theft prevention · HIPAA-compliant architecture · Staff duress & safety monitoring
+
+**Results:** 85% fall detection accuracy · HIPAA certified architecture · Zero privacy breaches recorded
+
+**Compliance:** HIPAA · GDPR · ISO 27001
+
+---
+
+### Solution 05 — Manufacturing & Industrial
+Ensure worker safety, enforce PPE compliance, and protect critical machinery. AI surveillance that integrates with industrial control systems for holistic site protection.
+
+**Capabilities:** PPE & safety compliance monitoring · Hazardous zone enforcement · Equipment tampering alerts · Shift & workforce analytics · Fire & smoke early detection
+
+**Results:** 70% safety incident reduction · ISO 45001 ready · Real-time PPE compliance
+
+**Compliance:** OSHA · ISO 45001 · SIL 2
+
+---
+
+### Solution 06 — Government & Critical Infrastructure
+Protect national assets with sovereign-grade AI surveillance. Designed for border control, critical infrastructure, government buildings, and classified environments.
+
+**Capabilities:** Border & perimeter protection · Secure on-premise deployment · Classification-level data handling · Multi-agency response integration · Counter-drone capabilities
+
+**Results:** Air-gap capable deployment · NDAA fully compliant · 99.99% uptime SLA
+
+**Compliance:** NDAA · ISO 27001 · Air-Gap
+
+---
+
+### Core AI Capabilities (All Solutions)
+Perimeter Intrusion · Crowd Analytics · Vehicle Detection · Heatmap & Dwell · Forensic Search · Object Left/Removed · Zone Management · Behaviour Detection · Smart Alerting
+
+### Deployment Process
+1. **Connect Cameras** — RTSP, ONVIF, 3,000+ models, no firmware changes (Step 01)
+2. **Define Zones & Rules** — virtual boundaries, sensitivity, routing via web dashboard (Step 02)
+3. **AI Goes Live** — self-calibrates within seconds, optimal from first frame (Step 03)
+4. **Alerts & Insights** — Slack, Teams, SMS, email, PagerDuty with video evidence (Step 04)
+
+### Global Compliance
+GDPR · CCPA · HIPAA · ISO 27001 · SOC 2 Type II · NDAA · SIL 2 · ISO 45001
+
+---
+
+## Page: Technology
+**URL:** https://mjinnovations.net/technology.html
+
+### Platform Overview
+Deep learning models built exclusively for surveillance — trained on 2B+ real-world frames, optimised for lowest false-positive rates and fastest detection latency.
+
+**Key Specs:** 97.3% detection accuracy · <12ms frame latency · <300ms alert dispatch · 14+ AI models · 2B+ training frames
+
+### End-to-End Pipeline (pixel to protected, <300ms total)
+1. Capture — camera frame via RTSP/ONVIF (0ms)
+2. Decode — GPU-accelerated frame decode (1–3ms)
+3. AI Analyse — Vision + Behaviour models in parallel (4–12ms)
+4. Detect — threat identified, confidence scored (<12ms)
+5. Verify — threshold check, false-positive filter (<50ms)
+6. Alert — team notified with video evidence (<300ms)
+
+---
+
+### Engine 01 — MJ Vision AI (MJ-Vision-X1)
+Real-time multi-class detection across all camera feeds simultaneously. Custom transformer + CNN hybrid architecture trained on 2B+ surveillance frames across 40+ environment types.
+
+**Detects:** People · Vehicles · Objects · Behaviours  
+**Specs:** 97.3% accuracy · <12ms/frame · 60fps max · Unlimited cameras · Night vision & thermal support · Cross-camera tracking
+
+---
+
+### Engine 02 — MJ Behaviour AI (MJ-Behav-G2)
+Graph neural network modelling spatial and temporal relationships between entities to understand intent. Analyses 30-second context window per entity.
+
+**Detects:** 28 behaviour types including loitering, crowd anomalies, aggression, falls, PPE violations, restricted zone breaches  
+**Specs:** 94.8% accuracy · <0.3% false positives · 30-second context · Graph neural network architecture
+
+---
+
+### Engine 03 — MJ Alert Engine (MJ-Alert-A1)
+Ultra-low-latency alert orchestration. Routes threats with auto-attached video evidence to the right team across 12+ channels in <300ms.
+
+**Channels:** Slack · MS Teams · SMS/WhatsApp · Email · PagerDuty · Webhooks · REST API  
+**Specs:** <300ms dispatch · 12+ channels · Unlimited routing rules · ±30s evidence clip auto-attached · Severity-based escalation · On-call schedule integration
+
+---
+
+### Engine 04 — MJ Forensic Search (MJ-Search-S3)
+Semantic search across 365 days of footage using natural language. Describe what you're looking for — returns exact matches across all cameras in <1 second.
+
+**Example:** "Red jacket, male, near exit, after 10pm" → results in 0.8s across 847,000 frames  
+**Specs:** <1s per 1M frames · 365-day retention · AES-256 encrypted · 42 languages · Tamper-proof export
+
+---
+
+### Engine 05 — MJ Device X
+Edge AI processor for fully offline, on-site inference. Full MJ AI stack runs locally without internet.
+
+**Specs:** 12 TOPS Edge NPU · <18ms/frame · 8 HD streams · 4K 30fps · PoE + USB-C + HDMI · 64GB eMMC · 8W · IP67 · −20°C to 65°C · OTA updates · Fanless  
+**Certifications:** CE · FCC · RoHS · ISO 27001 · NDAA
+
+---
+
+### AI Model Suite
+| Model | Type | Accuracy | Latency |
+|---|---|---|---|
+| MJ-Vision-X1 | Detection | 97.3% | <12ms |
+| MJ-Behav-G2 | Behaviour | 94.8% | Context-aware |
+| MJ-Search-S3 | Forensics | — | <1s/1M frames |
+| MJ-Alert-A1 | Alerting | — | <300ms |
+| MJ-VehicleAI-V2 | LPR/Vehicle | 96.8% | Real-time |
+| MJ-Safety-P1 | PPE/Safety | 96.1% | <2s |
+
+---
+
+### Deployment Options
+1. **On-Premises** — full air-gap, zero cloud, sovereign data, government/defence grade
+2. **Private Cloud** — AWS / Azure / GCP / OVH, 99.9% SLA, GDPR
+3. **Device X Edge** — fully offline, no internet required, IP67, <18ms
+4. **Managed API** — zero infrastructure, instant setup, auto-scaling
+
+### Integrations
+Slack · MS Teams · PagerDuty · SMS/WhatsApp · Email · REST API · AWS/Azure · Milestone VMS · Genetec · Avigilon · Webhooks · 40+ more
+
+### Security & Privacy
+TLS 1.3 encryption · AES-256 at rest · Quarterly pen testing · SOC 2 Type II · GDPR · Role-based access · Immutable audit logs · Air-gap capable
+
+---
+
+### Honest Roadmap (Building in Public)
+- ✅ Platform architecture completed
+- ✅ Device X hardware v1 produced
+- 🔵 Pilot programme — MENA market (NOW — seeking first partners)
+- ⬜ First enterprise contracts (Q3 2026)
+- ⬜ International expansion (Q4 2026)
+
+**Current status:** 0 enterprise clients (honest) · 0 active pilots (seeking) · Production-ready platform · Early-stage company
+
+---
+
+### MJ Innovations vs Traditional CCTV
+| Capability | MJ Innovations | Traditional CCTV | Basic AI Add-On |
+|---|---|---|---|
+| Real-time detection | 97.3% accuracy | ✗ | ~80–85% |
+| Behaviour analysis | 28 types | ✗ | ✗ |
+| Alert latency | <300ms | Manual | 2–30s |
+| Forensic search | <1s / 1M frames | ✗ | ✗ |
+| False positive rate | <0.3% | N/A | 15–30% |
+| Deployment time | <30 minutes | Days–weeks | Days |
+
+---
+
+## Page: About
+**URL:** https://mjinnovations.net/about.html
+
+MJ Innovations FZ LLC is a new AI surveillance company headquartered in Dubai Silicon Oasis Free Zone, UAE. Founded to solve the fundamental limitation of passive surveillance — cameras that record but don't understand.
+
+**Mission:** Transform every camera into an intelligent sensor that detects, understands, and acts — before incidents escalate.
+
+**Founder:** Jessica, CEO & Founder — "At MJ Innovations, we operate at the intersection of ideas and intelligence — where innovation meets intelligence to create meaningful impact for our clients."
+
+**Headquarters:** Dubai Silicon Oasis, Dubai, UAE  
+**Stage:** Early-stage · Production-ready · Seeking first pilot partners  
+**Coverage:** UAE primary · MENA expansion · Global remote engineering team
+
+---
+
+## Page: Contact
+**URL:** https://mjinnovations.net/contact.html
+
+**Email:** hello@mjinnovations.ai  
+**Phone:** +971 4 000 0000  
+**Address:** Dubai Silicon Oasis Free Zone, Dubai, UAE  
+**Hours:** Sunday–Thursday · 9am–6pm Gulf Standard Time  
+**Response SLA:** <2 business hours
+
+**Enquiry types:** Book a demo · Request a quote · Technical question · Partnership enquiry · Pilot programme · General enquiry
+
+---
+
+## Page: Get a Demo
+**URL:** https://mjinnovations.net/get-demo.html
+
+Free 30-minute live demo with an AI security engineer. No obligation. No pre-recorded video — live AI detections on a real environment.
+
+**Demo includes:**
+1. Live AI detection walkthrough (~8 min)
+2. Behaviour analytics demo (~7 min)
+3. Full alert pipeline demo (~6 min)
+4. Custom deployment plan (~9 min)
+
+**Commitments:** Exactly 30 minutes · No pressure · Live AI only · Written proposal same day · Your data stays private · Direct engineer access
+
+**After booking:** Confirmation <2hrs → Engineer preparation (day before) → Live 30-min demo → Written proposal same day
+
+---
+
+## Technical Reference
+
+### Supported Camera Protocols
+RTSP · ONVIF · HTTP(S) streams · MJPEG · H.264 · H.265 (HEVC) · BNC/Composite (via Device X adapter)
+
+### Supported VMS Platforms
+Milestone XProtect · Genetec Security Center · Avigilon Control Center · Hikvision iVMS · Hanwha Wisenet · Dahua DMSS
+
+### Alert Channel Integrations
+Slack · Microsoft Teams · PagerDuty · Twilio SMS · WhatsApp Business API · SMTP Email · Webhook (any endpoint) · REST API push
+
+### Compliance Standards
+GDPR (EU) · CCPA (California) · HIPAA (US Healthcare) · ISO/IEC 27001 · SOC 2 Type II · NDAA Section 889 · ISO 45001 (Safety) · SIL 2 (Industrial)
+
+---
+
+## Company Information
+
+**Legal Name:** MJ Innovations FZ LLC  
+**Domain:** mjinnovations.net  
+**Headquarters:** Dubai Silicon Oasis Free Zone, Dubai, United Arab Emirates  
+**Founded:** 2025  
+**Stage:** Early-stage startup · Production-ready platform · Seeking pilot partners  
+**Industry:** AI · Video Surveillance · Computer Vision · Enterprise Security  
+**Primary Markets:** UAE · Saudi Arabia · Qatar · Egypt · MENA region  
+**Tagline:** Where Innovation Meets Intelligence  
+
+**Social:**  
+- LinkedIn: linkedin.com/company/mj-innovations  
+- X (Twitter): @mjinnovations  
+
+**Key Differentiators:**
+- No camera replacement required — works with any existing CCTV or IP camera
+- Fully offline capable via Device X edge hardware
+- <300ms end-to-end alert latency
+- 97.3% detection accuracy with <0.3% false positive rate
+- Privacy-first: footage never leaves client infrastructure
+- 30-minute deployment from first camera connection to live AI
+- Free 30-day pilot programme — no commitment required
+
+**Keywords:** AI surveillance · video surveillance AI · CCTV AI · computer vision security · behaviour analytics · real-time threat detection · edge AI security · smart city surveillance · perimeter protection AI · forensic video search · Dubai AI company · UAE surveillance technology · AI camera system · MJ Device X · MJ Innovations

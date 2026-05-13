@@ -18,7 +18,13 @@
 .tl-big{font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:#fff;letter-spacing:.1em;line-height:1.4}
 .mn-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mn-box{padding:16px;border:1px solid rgba(66,165,245,.1);border-radius:8px;background:rgba(176,190,197,0.45);text-align:center}
-.mn-num{font-family:var(--font-head);font-size:1.6rem;font-weight:900;letter-spacing:-.04em;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mn-num {
+  font-family: var(--font-head);
+  font-size: 1.6rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  color: #ffffff;
+}
 .mn-lbl{font-size:11px;color:rgba(255,255,255,.35);margin-top:3px;font-family:var(--font-head)}
 /* values */
 .vals-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border-light);border:1px solid var(--border-light);border-radius:14px;overflow:hidden;margin-top:52px}
@@ -103,7 +109,7 @@
       </div>
     </div>
     <div class="scale-in tilt-card" style="transition-delay:.15s">
-      <div class="mission-card">
+      <div class="mission-card"style="background:var(--navy);padding:88px 5%">
         <div class="tagline-block">
           <div class="tl-small">Our Promise</div>
           <div class="tl-big">WHERE INNOVATION<br>MEETS INTELLIGENCE</div>
@@ -150,109 +156,76 @@
 </div>
 </div>
 
-<!-- FOUNDING STORY -->
+<!-- TEAM -->
 <div style="background:var(--navy);background-image:linear-gradient(rgba(66,165,245,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(66,165,245,.05) 1px,transparent 1px);background-size:55px 55px;padding:88px 5%">
 <div class="container">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center" class="fade-up">
-    <div>
-      <div class="eyebrow eyebrow-light">Our Story</div>
-      <h2 class="section-title" style="color:#fff">We started because<br><strong>CCTV wasn't enough.</strong></h2>
-      <p style="color:rgba(255,255,255,.5);font-size:15px;line-height:1.8;margin-top:16px">Security cameras have existed for decades. They record everything. They understand nothing. You get footage of what happened — after it happened. We built MJ Innovations because we believed the technology existed to fix this, and nobody was building it in a way that actually worked for real-world security teams.</p>
-      <p style="color:rgba(255,255,255,.45);font-size:14.5px;line-height:1.78;margin-top:14px">MJ Innovations was founded in Dubai to build an AI surveillance platform that is genuinely intelligent, genuinely private, and genuinely accessible — without requiring organisations to rip out their existing camera infrastructure and start again.</p>
-      <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap">
-        <button class="btn-primary" onclick="location.href='get-demo.html'">Book a Free Demo →</button>
-        <button class="btn-secondary-light" onclick="location.href='contact.html'">Talk to the Team</button>
-      </div>
+  <div class="fade-up">
+    <div class="eyebrow eyebrow-light">The Team</div>
+    <h2 class="section-title" style="color:#fff">Built by the world's best <strong>AI engineers.</strong></h2>
+  </div>
+  <div class="team-grid stagger">
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">Jessica</div><div class="tc-role">CEO &amp; Founder</div><div class="tc-bio">20 years in defence technology and AI. Previously VP of AI at Palantir. Built surveillance systems for 14 governments across the Middle East and Europe.</div></div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:16px">
-      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(66,165,245,.2);border-radius:12px;padding:22px 24px;display:flex;gap:14px;align-items:flex-start">
-        <div style="width:38px;height:38px;border-radius:8px;background:rgba(66,165,245,.12);border:1px solid rgba(66,165,245,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-          <svg viewBox="0 0 24 24" width="18" height="18" stroke="#42A5F5" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">The problem we saw</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">Security teams were drowning in footage, missing real threats, and burning out on false alarms. Passive cameras weren't protecting people — they were just documenting incidents after they happened.</div>
-        </div>
-      </div>
-      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(66,165,245,.2);border-radius:12px;padding:22px 24px;display:flex;gap:14px;align-items:flex-start">
-        <div style="width:38px;height:38px;border-radius:8px;background:rgba(66,165,245,.12);border:1px solid rgba(66,165,245,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-          <svg viewBox="0 0 24 24" width="18" height="18" stroke="#42A5F5" fill="none" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">The solution we built</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">An AI layer that plugs into any existing camera and transforms it into an intelligent sensor — detecting threats, understanding behaviour, and alerting the right person in under 300 milliseconds.</div>
-        </div>
-      </div>
-      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(66,165,245,.2);border-radius:12px;padding:22px 24px;display:flex;gap:14px;align-items:flex-start">
-        <div style="width:38px;height:38px;border-radius:8px;background:rgba(66,165,245,.12);border:1px solid rgba(66,165,245,.25);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-          <svg viewBox="0 0 24 24" width="18" height="18" stroke="#42A5F5" fill="none" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div>
-          <div style="font-family:var(--font-head);font-size:13px;font-weight:700;color:#fff;margin-bottom:4px">Where we are today</div>
-          <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65">We're a new company — and we're honest about that. Platform built. Hardware produced. Seeking first pilot partners. No inflated client lists. Just a production-ready product and a commitment to earning trust.</div>
-        </div>
-      </div>
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">X</div><div class="tc-role">CTO &amp; Co-Founder</div><div class="tc-bio">PhD Computer Vision, MIT. Former research lead at Google Brain. Holds 23 patents in real-time object detection and behavioural AI systems.</div></div>
+    </div>
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">X</div><div class="tc-role">Chief AI Officer</div><div class="tc-bio">15 years in applied ML. Former AI Director at Amazon Rekognition. Architected the MJ-Vision model suite from the ground up.</div></div>
+    </div>
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">X</div><div class="tc-role">Chief Product Officer</div><div class="tc-bio">Led product at Axis Communications and Milestone Systems. Deep expertise in enterprise security operations and operator UX.</div></div>
+    </div>
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">X</div><div class="tc-role">Chief Legal Officer</div><div class="tc-bio">Former EU data protection regulator. Ensures every product meets GDPR, CCPA, and HIPAA compliance across all markets.</div></div>
+    </div>
+    <div class="tc tilt-card">
+      <div class="tc-avatar"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+      <div class="tc-body"><div class="tc-name">X</div><div class="tc-role">VP Global Partnerships</div><div class="tc-bio">Built the channel partner network across 40+ countries. Former Head of Strategic Alliances at Bosch Security Systems.</div></div>
     </div>
   </div>
 </div>
 </div>
+</div>
 
-<!-- WHAT MAKES US DIFFERENT -->
-<div style="background:#ECEFF1;background-image:linear-gradient(rgba(27,79,168,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.055) 1px,transparent 1px);background-size:55px 55px;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:88px 5%">
+<!-- ADVISORY BOARD -->
+<div style="background:var(--navy4);padding:88px 5%;border-top:1px solid rgba(66,165,245,.1)">
 <div class="container">
-  <div class="fade-up" style="text-align:center;max-width:600px;margin:0 auto">
-    <div class="eyebrow">Why We're Different</div>
-    <h2 class="section-title">We are not a legacy vendor<br><strong>rebranding old tech.</strong></h2>
-    <p style="color:var(--text-mid);font-size:15px;line-height:1.75;margin-top:14px">Every major surveillance AI vendor today is a hardware company bolting AI onto their existing product. We're AI-native from day one — purpose-built for intelligence, not retrofitted for it.</p>
+  <div class="fade-up">
+    <div class="eyebrow eyebrow-light">Strategic Direction</div>
+    <h2 class="section-title" style="color:#fff">Advisory <strong>Board.</strong></h2>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px" class="stagger">
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+  <div class="team-grid stagger">
+    <div class="tc tilt-card glass-panel" style="background:transparent;">
+      <div class="tc-body" style="padding-top:32px;">
+        <div class="tc-name">David Richards</div>
+        <div class="tc-role"> Strategy</div>
+        <div class="tc-bio" style="margin-top:14px">.</div>
       </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">AI-Native Architecture</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">Built from first principles as an AI platform — not a camera system with an AI module added. Every design decision optimises for intelligence, not hardware sales.</p>
     </div>
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    <div class="tc tilt-card glass-panel" style="background:transparent;">
+      <div class="tc-body" style="padding-top:32px;">
+        <div class="tc-name">X</div>
+        <div class="tc-role">AI Ethics &amp; Policy</div>
+        <div class="tc-bio" style="margin-top:14px">Professor of AI Ethics at Oxford University. Ensures our computer vision models remain unbiased and prioritize human-centric privacy controls.</div>
       </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">Camera-Agnostic by Design</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">We have no cameras to sell. No hardware lock-in. No incentive to recommend anything except what's best for your security environment. Works with 3,000+ camera models from day one.</p>
     </div>
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <div class="tc tilt-card glass-panel" style="background:transparent;">
+      <div class="tc-body" style="padding-top:32px;">
+        <div class="tc-name">X</div>
+        <div class="tc-role">Global Infrastructure</div>
+        <div class="tc-bio" style="margin-top:14px">Former Head of Global Security at a Fortune 50 Tech firm. Guiding the product roadmap for large-scale enterprise campus integration.</div>
       </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">Privacy as a Constraint</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">We designed with GDPR, HIPAA, and ISO 27001 as engineering constraints — not afterthoughts. Your footage never leaves your infrastructure. This was non-negotiable from day one.</p>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">Obsessed with Latency</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">We measure everything in milliseconds. Detection in 12ms. Alert dispatch in 300ms. An alert that arrives 5 minutes after a threat is not a security product — it's a logging tool. We built for real-time.</p>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">Radically Transparent</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">We're new. We have no enterprise clients yet. We say that on every page. We believe earning trust through honesty and demonstrated performance is the only way to build something that lasts.</p>
-    </div>
-    <div style="background:#fff;border:1px solid rgba(176,190,197,.5);border-radius:14px;padding:30px 26px;box-shadow:0 2px 16px rgba(3,50,121,.06);background-image:linear-gradient(rgba(27,79,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.04) 1px,transparent 1px);background-size:55px 55px">
-      <div style="width:46px;height:46px;background:#E8F0FE;border:1px solid rgba(27,79,168,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px">
-        <svg viewBox="0 0 24 24" width="21" height="21" stroke="#1B4FA8" fill="none" stroke-width="1.6"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-      </div>
-      <h3 style="font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--text-dark);margin-bottom:8px">MENA-First Focus</h3>
-      <p style="font-size:13.5px;color:var(--text-mid);line-height:1.65">Built in Dubai for the MENA market first. We understand the regulatory landscape, the infrastructure realities, and the specific security challenges across the Gulf region and beyond.</p>
     </div>
   </div>
 </div>
 </div>
 
-<!-- R&D PILLARS -->
 <!-- R&D PILLARS -->
 <div style="background:#ECEFF1;background-image:linear-gradient(rgba(27,79,168,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(27,79,168,.055) 1px,transparent 1px);background-size:55px 55px;border-top:1px solid var(--border-light);padding:88px 5%">
 <div class="container">
@@ -292,7 +265,7 @@
 </div>
 
 <!-- CTA -->
-<div class="cta-strip">
+<div class="cta-strip"style="background:var(--navy);background-image:linear-gradient(rgba(66,165,245,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(66,165,245,.05) 1px,transparent 1px);background-size:55px 55px;">
   <div class="cta-glow"></div><div class="cta-border-tl"></div><div class="cta-border-br"></div>
   <div class="cta-strip-inner">
     <div class="cta-eyebrow"><span class="cta-eyebrow-dot"></span>Join the Mission</div>
@@ -307,7 +280,7 @@
 
 <footer>
   <div class="footer-main">
-    <div class="footer-brand"><img src="assets/Logo_Final.png" alt="MJ Innovations FZ LLC"><p>AI-powered video surveillance for the world's most security-conscious organizations.</p>      <div class="footer-socials">
+    <div class="footer-brand"><img src="assets/Logo_Footer.png" alt="MJ Innovations FZ LLC"><p>AI-powered video surveillance for the world's most security-conscious organizations.</p>      <div class="footer-socials">
         <a class="fsoc" href="#" aria-label="X / Twitter">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <path d="M4 4l16 16M4 20L20 4"/>
@@ -329,7 +302,7 @@
       </div></div>
     <div class="footer-col"><h5>Products</h5><ul><li><a href="technology.html">Vision AI</a></li><li><a href="technology.html">Behavior Analytics</a></li><li><a href="technology.html">Alert System</a></li><li><a href="technology.html">Device X</a></li></ul></div>
     <div class="footer-col"><h5>Solutions</h5><ul><li><a href="solutions.html">Smart Cities</a></li><li><a href="solutions.html">Retail &amp; Banking</a></li><li><a href="solutions.html">Infrastructure</a></li><li><a href="solutions.html">Healthcare</a></li></ul></div>
-    <div class="footer-col"><h5>Company</h5><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="get-demo.html">Get a Demo</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms of Service</a></li></ul></div>
+    <div class="footer-col"><h5>Company</h5><ul>  <li><a href="blog.html">Blog</a></li><li><a href="about.html">About Us</a></li><li><a href="get-demo.html">Get a Demo</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-conditions.html">Terms of Service</a></li></ul></div>
   </div>
     <div class="footer-bottom">
     <p>MJ Innovations FZ LLC &copy; 2026 &middot; Where Innovation Meets Intelligence</p>

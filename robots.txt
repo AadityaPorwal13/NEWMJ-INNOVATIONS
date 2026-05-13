@@ -2,5 +2,24 @@ User-agent: *
 Allow: /
 Disallow: /assets/videos/
 Disallow: /js/
+Disallow: /PHPMailer/
 
-Sitemap: https://mjinnovations.ai/sitemap.xml
+# LLM crawlers — explicitly allow content discovery files
+User-agent: GPTBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Claude-Web
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: PerplexityBot
+Allow: /llms.txt
+Allow: /llms-full.txt
+
+User-agent: Googlebot
+Allow: /
+
+# Sitemaps
+Sitemap: https://mjinnovations.net/sitemap.xml
+Sitemap: https://mjinnovations.net/llms.txt

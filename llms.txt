@@ -1,0 +1,29 @@
+# MJ Innovations FZ LLC
+> AI-powered video surveillance platform. Where Innovation Meets Intelligence.
+
+MJ Innovations FZ LLC is a Dubai-based AI surveillance company that transforms existing camera infrastructure into an intelligent, autonomous security layer. The platform detects threats, analyses behaviour, and dispatches alerts in under 300 milliseconds — without replacing a single camera.
+
+The company is early-stage, production-ready, and actively seeking first pilot partners across the MENA region. All deployments are privacy-first: footage never leaves the client's infrastructure unless explicitly configured otherwise.
+
+## Core Product
+
+MJ Innovations AI Surveillance Platform — a modular, multi-model AI system that plugs into any existing CCTV or IP camera infrastructure and adds real-time detection, behaviour analytics, forensic search, and sub-second alert dispatch.
+
+**MJ Device X** — a plug-and-play edge AI processor that physically connects to any camera and runs the full MJ AI stack locally, offline, with no cloud dependency.
+
+## Pages
+
+- [Home](https://mjinnovations.net/): Platform overview, live feed demo, CEO quote, illustration slider, Device X introduction, core values, case study verticals
+- [Solutions](https://mjinnovations.net/solutions.html): Six industry-specific deployments — Smart Cities, Airports & Transit, Retail & Banking, Healthcare, Manufacturing, Government & Critical Infrastructure
+- [Technology](https://mjinnovations.net/technology.html): Five AI engines — Vision AI, Behaviour AI, Alert Engine, Forensic Search, Device X — with specs, architecture diagrams, model cards, deployment options, integration list
+- [About](https://mjinnovations.net/about.html): Company background, founding mission, team, values, building-in-public roadmap
+- [Contact](https://mjinnovations.net/contact.html): Enquiry form, office details, response SLA, FAQ
+- [Get Demo](https://mjinnovations.net/get-demo.html): Multi-step demo booking form, what to expect, live AI preview, FAQ
+- [Blog](https://mjinnovations.net/blog.html): AI surveillance insights, industry news, technical deep-dives
+- [Privacy Policy](https://mjinnovations.net/privacy-policy.html): GDPR-compliant data handling policy
+- [Terms of Service](https://mjinnovations.net/terms-conditions.html): Platform usage terms
+
+## Optional
+
+- [Sitemap XML](https://mjinnovations.net/sitemap.xml)
+- [llms-full.txt](https://mjinnovations.net/llms-full.txt): Full markdown content mirror of all pages
