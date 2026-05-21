@@ -50,3 +50,19 @@
 @media(max-width:1000px){.mission-split{grid-template-columns:1fr;gap:40px}.vals-grid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}.tl-cols{grid-template-columns:1fr;gap:0}}
 @media(max-width:640px){.vals-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}.mn-grid{grid-template-columns:1fr 1fr}}
  
+
+
+/* FIX WHITE TEXT ISSUE */
+
+.tl-small,
+.tl-big,
+.mn-num,
+.mn-lbl{
+  color:#fff !important;
+  -webkit-text-fill-color:#fff !important;
+}
+
+/* REMOVE GRADIENT TEXT FROM NUMBERS */
+.mn-num{
+  background:none !important;
+}
