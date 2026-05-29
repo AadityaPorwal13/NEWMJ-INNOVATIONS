@@ -47,8 +47,110 @@
 .qa-av{width:44px;height:44px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:16px;font-weight:900;color:#fff;flex-shrink:0;border:2px solid rgba(66,165,245,.3)}
 .qa-name{font-family:var(--font-head);font-size:14px;font-weight:700;color:#fff}
 .qa-title{font-size:12px;color:rgba(255,255,255,.38);font-family:var(--font-head)}
-@media(max-width:1000px){.mission-split{grid-template-columns:1fr;gap:40px}.vals-grid{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}.tl-cols{grid-template-columns:1fr;gap:0}}
-@media(max-width:640px){.vals-grid{grid-template-columns:1fr}.team-grid{grid-template-columns:1fr}.mn-grid{grid-template-columns:1fr 1fr}}
+/* ── RESPONSIVE ── */
+
+/* Tablet */
+@media(max-width:1000px){
+  .mission-split{grid-template-columns:1fr;gap:40px}
+  .vals-grid{grid-template-columns:1fr 1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .tl-cols{grid-template-columns:1fr;gap:0}
+}
+
+/* Mobile */
+@media(max-width:768px){
+  /* Mission section */
+  .mission-split{gap: 32px}
+  .mission-left h2{font-size: clamp(1.6rem, 5vw, 2.4rem)}
+  .mission-left p{font-size: 13px}
+  .mission-card{padding: 24px}
+  .tagline-block{padding: 20px}
+  .tl-big{font-size: 1rem}
+
+  /* Values */
+  .vals-grid{grid-template-columns: 1fr; margin-top: 36px}
+  .vc{padding: 26px 20px}
+  .vc h3{font-size: 14px}
+  .vc p{font-size: 12.5px}
+
+  /* Team */
+  .team-grid{grid-template-columns: 1fr; gap: 16px; margin-top: 36px}
+  .tc{border-radius: 10px}
+  .tc-avatar{height: 120px}
+  .tc-body{padding: 16px}
+  .tc-name{font-size: 14px}
+  .tc-bio{font-size: 12px}
+
+  /* Timeline */
+  .tl-cols{gap: 0; margin-top: 36px}
+  .tl-item{gap: 16px; padding-bottom: 24px}
+  .tl-dot{width: 36px; height: 36px}
+  .tl-content h4{font-size: 14px}
+  .tl-content p{font-size: 12px}
+
+  /* Quote */
+  .about-quote{padding: 28px 20px; margin-top: 36px; border-radius: 12px}
+  .about-quote blockquote{font-size: 1rem}
+  .qa-av{width: 38px; height: 38px; font-size: 14px}
+  .qa-name{font-size: 13px}
+
+  /* ── INLINE STYLE OVERRIDES ── */
+  /* Founding story 2-col grid → 1-col */
+  .about-story-grid{grid-template-columns: 1fr !important; gap: 32px !important}
+
+  /* "What Makes Us Different" 3-col grid → 1-col */
+  .about-diff-grid{grid-template-columns: 1fr 1fr !important; gap: 12px !important; margin-top: 36px !important}
+  .about-diff-card{padding: 20px 16px !important}
+  .about-diff-card h3{font-size: 13px !important}
+  .about-diff-card p{font-size: 12px !important; line-height: 1.6}
+
+  /* R&D pillars flex → column */
+  .about-rd-flex{flex-direction: column !important; gap: 16px !important; margin-top: 36px !important}
+  .about-rd-card{width: 100% !important; min-width: 0 !important; padding: 28px 22px !important}
+
+  /* Section padding overrides */
+  .about-section-dark{padding: 56px 5% !important}
+  .about-section-light{padding: 56px 5% !important}
+
+  /* Prevent overflow on intro text containers */
+  .about-intro-text{max-width: 100% !important}
+}
+  .about-rd-card h3{font-size: 15px !important}
+  .about-rd-card p{font-size: 13px !important}
+
+  /* Section padding overrides */
+  .about-section-dark{padding: 56px 5% !important}
+  .about-section-light{padding: 56px 5% !important}
+}
+
+/* Small mobile */
+@media(max-width:480px){
+  .mission-left h2{font-size: 1.5rem}
+  .mission-card{padding: 20px 16px}
+  .mn-grid{grid-template-columns: 1fr 1fr}
+  .mn-num{font-size: 1.3rem}
+  .mn-lbl{font-size: 10px}
+
+  .vals-grid{margin-top: 28px}
+  .vc{padding: 22px 16px}
+
+  .team-grid{margin-top: 28px}
+  .tc-avatar{height: 100px}
+
+  .about-quote{padding: 24px 16px}
+  .about-quote blockquote{font-size: 0.95rem}
+
+  /* Inline style overrides */
+  .about-diff-grid{grid-template-columns: 1fr 1fr !important; margin-top: 28px !important; gap: 10px !important}
+  .about-diff-card{padding: 16px 14px !important}
+  .about-diff-card h3{font-size: 12px !important}
+  .about-diff-card p{font-size: 11px !important}
+  .about-rd-flex{margin-top: 28px !important}
+  .about-rd-card{padding: 22px 18px !important}
+
+  .about-section-dark{padding: 44px 4% !important}
+  .about-section-light{padding: 44px 4% !important}
+}
  
 
 

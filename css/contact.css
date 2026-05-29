@@ -198,6 +198,115 @@ input[name="enquiry_type"]{display:none}
 .next-step p{font-size:13px;color:var(--text-mid);line-height:1.65}
 
 /* ── RESPONSIVE ── */
-@media(max-width:1100px){.contact-grid{grid-template-columns:1fr;gap:52px}.contact-hero-inner{grid-template-columns:1fr}.chi-right{display:none}.enq-type-grid{grid-template-columns:1fr 1fr}.offices-grid{grid-template-columns:1fr 1fr}.next-row{grid-template-columns:1fr 1fr}.next-step:not(:nth-child(2)):not(:nth-child(4)){border-right:1px solid var(--border-light)}.next-step:nth-child(2){border-right:none}.next-step:nth-child(1),.next-step:nth-child(2){border-bottom:1px solid var(--border-light)}}
-@media(max-width:768px){.contact-hero{padding:120px 5% 60px}.chi-text h1{font-size:2.4rem}.enq-type-grid{grid-template-columns:1fr}.offices-grid{grid-template-columns:1fr}.next-row{grid-template-columns:1fr}.next-step{border-right:none!important;border-bottom:1px solid var(--border-light)}.next-step:last-child{border-bottom:none}.enq-pills{grid-template-columns:1fr 1fr}.chi-quick-reach{gap:8px}}
-@media(max-width:480px){.form-row{grid-template-columns:1fr}.form-body{padding:20px}.form-card-header{padding:20px}.chi-text h1{font-size:1.9rem}.enq-pills{grid-template-columns:1fr}}
+
+/* Large tablet */
+@media(max-width:1100px){
+  .contact-grid{grid-template-columns:1fr;gap:52px}
+  .contact-hero-inner{grid-template-columns:1fr}
+  .chi-right{display:none}
+  .enq-type-grid{grid-template-columns:1fr 1fr}
+  .offices-grid{grid-template-columns:1fr 1fr}
+  .next-row{grid-template-columns:1fr 1fr}
+  .next-step:not(:nth-child(2)):not(:nth-child(4)){border-right:1px solid var(--border-light)}
+  .next-step:nth-child(2){border-right:none}
+  .next-step:nth-child(1),.next-step:nth-child(2){border-bottom:1px solid var(--border-light)}
+}
+
+/* Mobile */
+@media(max-width:768px){
+  /* Hero */
+  .contact-hero{padding: 110px 5% 48px}
+  .chi-text h1{font-size: clamp(1.8rem, 6vw, 2.4rem)}
+  .chi-text p{font-size: 13px; margin-bottom: 24px}
+  .chi-badge{font-size: 10px; padding: 5px 12px; margin-bottom: 18px}
+  .chi-quick-reach{gap: 8px}
+  .qr-item{padding: 12px 14px}
+  .qr-label{font-size: 9px}
+  .qr-val{font-size: 13px}
+
+  /* Main form */
+  .contact-main{padding: 56px 5% 80px}
+  .contact-grid{gap: 40px}
+  .contact-info h2{font-size: clamp(1.5rem, 4vw, 2rem)}
+  .contact-info>p{font-size: 13px; margin-bottom: 28px}
+
+  /* Contact cards */
+  .c-cards{gap: 10px; margin-bottom: 28px}
+  .c-card{padding: 14px}
+  .c-card-icon{width: 36px; height: 36px}
+  .c-card-val{font-size: 13px}
+
+  /* Trust box */
+  .trust-box{padding: 18px 16px}
+  .trust-item{font-size: 12.5px}
+
+  /* Form card */
+  .form-card{border-radius: 16px}
+  .form-card-header{padding: 22px 24px 18px}
+  .form-body{padding: 22px 24px 26px}
+  .fg input, .fg select, .fg textarea{padding: 11px 13px; font-size: 13px}
+  .fg label{font-size: 10px}
+  .form-row{gap: 10px}
+  .contact-submit{padding: 14px; font-size: 14px}
+
+  /* Enquiry types */
+  .enq-type-section{padding: 56px 5%}
+  .enq-type-grid{grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 36px}
+  .enq-type-card{padding: 20px 16px}
+  .etcard-icon{width: 44px; height: 44px; margin-bottom: 12px}
+  .etcard-title{font-size: 13px}
+  .etcard-desc{font-size: 12px}
+
+  /* Offices */
+  .offices-grid{grid-template-columns: 1fr; gap: 14px; margin-top: 36px}
+  .office-card{padding: 24px 20px}
+  .office-card h4{font-size: 14px}
+  .office-card p{font-size: 12.5px}
+
+  /* FAQ */
+  .faq-list{margin-top: 36px; border-radius: 10px}
+  .faq-q{padding: 16px 18px; font-size: 14px}
+  .faq-a.open{padding: 0 18px 16px}
+  .faq-a p{font-size: 13px}
+
+  /* Next steps */
+  .next-row{grid-template-columns: 1fr; border-radius: 10px; margin-top: 36px}
+  .next-step{border-right: none !important; border-bottom: 1px solid var(--border-light); padding: 24px 20px}
+  .next-step:last-child{border-bottom: none}
+  .next-step h4{font-size: 14px}
+  .next-step p{font-size: 12.5px}
+
+  /* Enquiry pills */
+  .enq-pills{grid-template-columns: 1fr 1fr; gap: 6px}
+  .enq-pill{padding: 10px 8px; font-size: 11px}
+
+  /* Live ticker */
+  .live-ticker{padding: 12px 14px}
+  .lt-text{font-size: 11px}
+}
+
+/* Small mobile */
+@media(max-width:480px){
+  .contact-hero{padding: 100px 4% 40px}
+  .chi-text h1{font-size: 1.7rem}
+  .chi-text p{font-size: 12px}
+
+  .contact-main{padding: 44px 4% 64px}
+  .contact-info h2{font-size: 1.4rem}
+
+  .form-card{border-radius: 14px}
+  .form-card-header{padding: 18px 18px 14px}
+  .form-body{padding: 18px 18px 22px}
+  .form-row{grid-template-columns: 1fr}
+  .fg input, .fg select, .fg textarea{padding: 10px 12px; font-size: 13px}
+  .contact-submit{padding: 13px; font-size: 13px}
+
+  .enq-type-section{padding: 44px 4%}
+  .enq-pills{grid-template-columns: 1fr}
+
+  .offices-grid{margin-top: 28px}
+
+  .faq-list{margin-top: 28px}
+  .faq-q{padding: 14px 14px; font-size: 13px}
+  .faq-a.open{padding: 0 14px 14px}
+}

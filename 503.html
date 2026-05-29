@@ -155,10 +155,21 @@ p{font-size:14.5px;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:36p
 .sl-dot{width:6px;height:6px;border-radius:50%;background:#60a5fa;box-shadow:0 0 5px #60a5fa;animation:blink .9s step-end infinite}
 .sl-val{color:rgba(255,255,255,.65);font-weight:500}
 
-@media(max-width:520px){
-  .card{padding:36px 24px}
+/* Responsive */
+@media(max-width:768px){
+  .card{padding:48px 32px;max-width:92%}
+  .error-code{font-size:90px}
+  h1{font-size:2rem}
+  p{font-size:15px}
+  .home-btn{padding:14px 32px;font-size:14px}
+  .corner{display:none}
+}
+@media(max-width:480px){
+  .card{padding:36px 24px;max-width:95%;border-radius:16px}
   .error-code{font-size:72px}
-  h1{font-size:1.7rem}
+  h1{font-size:1.6rem}
+  p{font-size:14px}
+  .home-btn{padding:13px 28px;font-size:13px;width:100%;justify-content:center}
   .status-line{display:none}
 }
 </style>

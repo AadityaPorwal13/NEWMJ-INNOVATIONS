@@ -127,9 +127,71 @@
 .cbadge{padding:8px 18px;background:var(--metal-light);border:1px solid var(--border-light);border-radius:6px;font-family:var(--font-head);font-size:12px;font-weight:700;color:var(--blue-mid);letter-spacing:.06em}
 
 /* ── RESPONSIVE ── */
-@media(max-width:1100px){.sol-detail{grid-template-columns:1fr 1fr}.sol-cta-box{grid-column:1/-1}}
-@media(max-width:900px){.cap-grid{grid-template-columns:1fr 1fr}.comp-two{grid-template-columns:1fr}.testi-grid{grid-template-columns:1fr}.process-row{grid-template-columns:1fr 1fr}.p-step:not(:last-child){border-right:none;border-bottom:1px solid var(--border-light)}}
-@media(max-width:700px){.sol-detail{grid-template-columns:1fr}.sol-header{padding-top:48px;padding-left:4%;padding-right:4%}.sol-illus-wrap{margin:24px auto 0;width:92%;border-radius:10px;padding:8px}.sol-detail{padding:28px 4% 56px}}
-@media(max-width:600px){.cap-grid{grid-template-columns:1fr}.process-row{grid-template-columns:1fr}}
+
+/* Tablet */
+@media(max-width:1100px){
+  .sol-detail{grid-template-columns:1fr 1fr}
+  .sol-cta-box{grid-column:1/-1}
+}
+
+/* Small tablet */
+@media(max-width:900px){
+  .cap-grid{grid-template-columns:1fr 1fr}
+  .comp-two{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .process-row{grid-template-columns:1fr 1fr}
+  .p-step:not(:last-child){border-right:none;border-bottom:1px solid var(--border-light)}
+}
+
+/* Integration ecosystem — 2x2 grid */
+.int-eco-grid{display:grid !important;grid-template-columns:repeat(2,1fr) !important;gap:14px !important}
+.int-eco-grid .tilt-card{width:100% !important;min-width:0 !important}
+
+/* Mobile */
+@media(max-width:768px){
+  .sol-detail{grid-template-columns:1fr; gap: 16px; padding: 24px 5% 56px}
+  .sol-header{padding-top: 40px; padding-left: 5%; padding-right: 5%; flex-direction: column; align-items: flex-start; gap: 12px}
+  .sol-header h2{font-size: clamp(1.6rem, 5vw, 2.4rem)}
+  .sol-header-right{max-width: 100%; font-size: 13px}
+  .sol-illus-wrap{margin: 20px auto 0; width: 94%; border-radius: 10px; padding: 8px}
+  .sol-feats-box, .sol-stats-box{padding: 20px}
+  .sol-cta-box{padding: 24px 20px}
+  .sol-comp-strip{gap: 5px}
+  .sol-comp-badge{font-size: 9px; padding: 2px 7px}
+
+  /* Cap grid */
+  .cap-grid{grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 36px}
+  .cap-card{padding: 20px 16px}
+  .cap-card h4{font-size: 13px}
+  .cap-card p{font-size: 12px; line-height: 1.6}
+  .cap-card-hide-mobile{display: none !important}
+
+  /* Process */
+  .process-row{grid-template-columns: 1fr; border-radius: 10px}
+  .p-step{padding: 24px 20px}
+  .p-step h4{font-size: 14px}
+  .p-step p{font-size: 12.5px}
+
+  /* Testimonials */
+  .testi-grid{gap: 14px; margin-top: 36px}
+  .testi-card{padding: 22px 20px}
+  .testi-text{font-size: 13px}
+
+  /* Compliance */
+  .comp-two{gap: 36px}
+  .comp-badges{gap: 8px}
+  .cbadge{padding: 6px 14px; font-size: 11px}
+}
+
+/* Small mobile */
+@media(max-width:480px){
+  .sol-detail{padding: 20px 4% 48px}
+  .sol-header{padding-top: 32px; padding-left: 4%; padding-right: 4%}
+  .sol-header h2{font-size: 1.5rem}
+  .sol-illus-wrap{width: 96%; padding: 6px}
+  .sol-feats-box, .sol-stats-box{padding: 18px 16px}
+  .sol-feats li{font-size: 12px}
+  .sol-stat-num{font-size: 1.4rem}
+}
 
 

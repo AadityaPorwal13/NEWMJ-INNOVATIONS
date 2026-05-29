@@ -24,6 +24,30 @@
 .accept-icon{width:36px;height:36px;border-radius:8px;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .accept-icon svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:2}
 .accept-banner p{font-size:14px;color:var(--text-mid);line-height:1.65;margin:0;font-style:italic}
+
+/* Mobile responsive */
+@media(max-width:768px){
+  .legal-wrap{padding:56px 5% 72px}
+  .legal-wrap h1{font-size:clamp(1.6rem,5vw,2.2rem)}
+  .legal-wrap h2{font-size:1.2rem;margin:32px 0 10px}
+  .legal-wrap h3{font-size:1rem;margin:20px 0 6px}
+  .legal-wrap p{font-size:14px;line-height:1.7;margin-bottom:12px}
+  .legal-wrap li{font-size:13.5px;line-height:1.7}
+  .legal-badge{font-size:11px;padding:6px 12px;margin-bottom:28px}
+  .contact-box{padding:20px;margin-top:28px}
+  .contact-box p{font-size:13px}
+  .accept-banner{padding:18px;margin-top:32px;flex-direction:column;gap:12px}
+  .accept-banner p{font-size:13px}
+}
+@media(max-width:480px){
+  .legal-wrap{padding:44px 4% 60px}
+  .legal-wrap h1{font-size:1.5rem}
+  .legal-wrap h2{font-size:1.1rem;margin:24px 0 8px}
+  .legal-wrap h3{font-size:0.95rem}
+  .legal-wrap p{font-size:13px}
+  .legal-wrap li{font-size:12.5px}
+  .contact-box{padding:18px 16px}
+}
 </style>
 </head>
 <body>

@@ -35,11 +35,19 @@ if (hamburger && drawer) {
     hamburger.classList.toggle('open');
     drawer.classList.toggle('open');
   });
+  // Close drawer when clicking outside
   document.addEventListener('click', (e) => {
     if (nav && !nav.contains(e.target) && !drawer.contains(e.target)) {
       hamburger.classList.remove('open');
       drawer.classList.remove('open');
     }
+  });
+  // Close drawer when clicking a link (better mobile UX)
+  drawer.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      drawer.classList.remove('open');
+    });
   });
 }
 
