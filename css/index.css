@@ -310,7 +310,7 @@
 /* ══ FEATURE SECTIONS ═══════════════════════════ */
 .section-light    { background:var(--bg-white);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light); }
 .section-grid-bg  { background:var(--bg-grid);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light); }
-.section-dark-bg  { background:var(--navy);border-top:1px solid rgba(66,165,245,0.08);border-bottom:1px solid rgba(66,165,245,0.08); }
+.section-dark-bg  { background:var(--navy);border-top:1px solid rgba(66,165,245,0.08);border-bottom:1px solid rgba(66,165,245,0.08);overflow-x:hidden; }
 
 /* ══ DEVICE X SECTION ══════════════════════════= */
 .xdev-section {
@@ -612,10 +612,6 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 8px;
-    margin-left: -5%;
-    margin-right: -5%;
-    padding-left: 5%;
-    padding-right: 5%;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }

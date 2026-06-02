@@ -577,6 +577,20 @@
 
 <script src="js/main.js"></script>
 <script>
+/* ── Fetch CSRF token on page load ── */
+document.getElementById('demo-submit-btn').disabled = true;
+fetch('csrf_token.php')
+  .then(r => r.json())
+  .then(data => {
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'csrf_token';
+    input.value = data.csrf_token;
+    document.getElementById('demo-form').appendChild(input);
+    document.getElementById('demo-submit-btn').disabled = false;
+  });
+</script>
+<script>
 /* ── Multi-step form ── */
 let currentStep = 1;
 const totalSteps = 3;
@@ -664,9 +678,8 @@ function handleDemo(e) {
       }
     })
     .catch(() => {
-      // Graceful fallback — show success anyway (form collected)
-      document.getElementById('form-body-main').style.display = 'none';
-      document.getElementById('demo-success').style.display = 'block';
+      alert('Network error. Please check your connection and try again.');
+      btn.innerHTML = originalHTML; btn.disabled = false;
     });
 }
 
